@@ -7,7 +7,7 @@ import algorithms.mazeGenerators.*;
 public class RunMazeGenerator {
     public static void main(String[] args) {
         MyMazeGenerator pm = new MyMazeGenerator();
-        Maze m = pm.generate(10, 10);
+        Maze m = pm.generate(6, 6);
         m.print();
     }
 }

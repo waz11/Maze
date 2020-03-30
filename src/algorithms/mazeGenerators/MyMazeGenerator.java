@@ -11,15 +11,13 @@ public class MyMazeGenerator extends AMazeGenerator {
         Maze myMaze = new Maze(rows, cols);
         Random rand = new Random();
         Stack<Position> possibleStack = new Stack<>();
-
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++)
                 myMaze.setValueInMaze(i, j, 1);
         }
-        Position[] special = getSpecialPositions(rows, cols);
-        myMaze.setStart(special[0]);
-        myMaze.setGoal(special[1]);
-        addAdjacent(myMaze, possibleStack, special[0]);
+        Position start = new Position(rand.nextInt(rows), rand.nextInt(cols));
+        myMaze.setStart(start);
+        addAdjacent(myMaze, possibleStack, start);
         while (!possibleStack.isEmpty()) {
             Position next = possibleStack.pop();
             Position path = possibleStack.pop();
@@ -28,6 +26,11 @@ public class MyMazeGenerator extends AMazeGenerator {
                 addAdjacent(myMaze, possibleStack, next);
             }
         }
+        Position goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
+        while (goal.equals(start) || myMaze.getValueInMaze(goal.getRowIndex(), goal.getColumnIndex()) == 1){
+            goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
+        }
+        myMaze.setGoal(goal);
         return myMaze;
     }
 
