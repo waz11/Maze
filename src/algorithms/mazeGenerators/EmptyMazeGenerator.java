@@ -1,5 +1,4 @@
 package algorithms.mazeGenerators;
-import java.util.Random;
 
 public class EmptyMazeGenerator extends AMazeGenerator {
 
@@ -10,9 +9,9 @@ public class EmptyMazeGenerator extends AMazeGenerator {
         Position[] specialPositions = getSpecialPositions(rows,cols);
         maze.setStart(specialPositions[0]);
         maze.setGoal(specialPositions[1]);
-        for (int i=0; i<rows; i++) {
-            for (int j = 0; j < cols; j++)
-                maze.setValueInMaze(i, j, 0);
+        for (int row=0; row<rows; row++) {
+            for (int col = 0; col < cols; col++)
+                maze.setPath(row,col);
         }
         return maze;
     }

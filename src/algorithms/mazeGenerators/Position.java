@@ -11,14 +11,13 @@ public class Position {
         this.col = col;
     }
 
-    public int getRowIndex() {
+    public int getRow() {
         return row;
     }
 
-    public int getColumnIndex() {
+    public int getCol() {
         return col;
     }
-    //Should we define setters?
 
     public String toString() {
         return "{" + row + "," + col + "}";
@@ -29,12 +28,13 @@ public class Position {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Position position = (Position) o;
-        return row == position.row &&
-                col == position.col;
+        return row == position.row && col == position.col;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(row, col);
     }
+
+
 }

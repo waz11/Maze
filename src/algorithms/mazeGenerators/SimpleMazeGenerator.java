@@ -7,23 +7,23 @@ import java.util.Random;
 public class SimpleMazeGenerator extends AMazeGenerator {
     @Override
     public Maze generate(int rows, int cols) {
-        Maze simpleMaze = new Maze(rows,cols);
+        Maze maze = new Maze(rows,cols);
         Random rand = new Random();
         for (int i=0; i<rows; i++){
             for (int j=0; j<cols; j++){
                 int value = rand.nextInt(5);
                 if (value%5 == 0)
-                    simpleMaze.setValueInMaze(i, j, 1);
+                    maze.setWall(i,j);
                 else
-                    simpleMaze.setValueInMaze(i, j, 0);
+                    maze.setWall(i,j);
             }
         }
         Position[] specialPositions = getSpecialPositions(rows,cols);
-        simpleMaze.setStart(specialPositions[0]);
-        simpleMaze.setGoal(specialPositions[1]);
+        maze.setStart(specialPositions[0]);
+        maze.setGoal(specialPositions[1]);
 
-        simpleMaze.setValueInMaze(simpleMaze.getStartPosition().getRowIndex(), simpleMaze.getStartPosition().getColumnIndex(), 0);
-        simpleMaze.setValueInMaze(simpleMaze.getGoalPosition().getRowIndex(), simpleMaze.getGoalPosition().getColumnIndex(), 0);
-        return simpleMaze;
+        maze.setPath(maze.getStart());
+        maze.setPath(maze.getGoal());
+        return maze;
     }
 }

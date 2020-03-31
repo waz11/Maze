@@ -40,8 +40,8 @@ public abstract class AMazeGenerator implements IMazeGenerator {
      * @return true - two points at the same edge, false - else;
      */
     private boolean sameEdge(Position p1, Position p2){
-        int rowsDiff = p1.getRowIndex() - p2.getRowIndex();
-        int colsDiff = p1.getColumnIndex() - p2.getColumnIndex();
+        int rowsDiff = p1.getRow() - p2.getRow();
+        int colsDiff = p1.getCol() - p2.getCol();
         boolean ans = (rowsDiff == 0) || (colsDiff == 0);
         return ans;
     }

@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba2d5290-adf6-4407-afaa-b51b833f9245" name="Default Changelist" comment="" />
+    <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectId" id="1ZiY7f3zJggCjTbIh8rCchcRTD6" />
+  <component name="ProjectId" id="1Zrt7jAhj3VvmzwC1Ib2tZFkZY3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,13 +17,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RunMazeGenerator" />
-      <module name="partA" />
+      <module name="ATP - Project - PartA" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -46,28 +39,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba2d5290-adf6-4407-afaa-b51b833f9245" name="Default Changelist" comment="" />
-      <created>1585323216217</created>
+      <changelist id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="" />
+      <created>1585608874550</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585323216217</updated>
-      <workItem from="1585323218423" duration="521000" />
-      <workItem from="1585389461339" duration="38000" />
-      <workItem from="1585399181101" duration="12060000" />
-      <workItem from="1585421045032" duration="2743000" />
-      <workItem from="1585424998221" duration="598000" />
-      <workItem from="1585426374153" duration="386000" />
-      <workItem from="1585427198193" duration="2920000" />
-      <workItem from="1585469452521" duration="17423000" />
-      <workItem from="1585489569768" duration="5094000" />
-      <workItem from="1585496997513" duration="8770000" />
-      <workItem from="1585509061389" duration="3098000" />
-      <workItem from="1585513008969" duration="58000" />
-      <workItem from="1585514130239" duration="187000" />
-      <workItem from="1585552207309" duration="258000" />
-      <workItem from="1585552932087" duration="471000" />
-      <workItem from="1585569307799" duration="1692000" />
-      <workItem from="1585582342744" duration="491000" />
+      <updated>1585608874550</updated>
+      <workItem from="1585608877150" duration="2000" />
+      <workItem from="1585608905717" duration="55000" />
+      <workItem from="1585629794932" duration="487000" />
+      <workItem from="1585630304799" duration="17000" />
+      <workItem from="1585630369365" duration="566000" />
+      <workItem from="1585631052617" duration="379000" />
+      <workItem from="1585631477576" duration="8000" />
     </task>
     <servers />
   </component>
@@ -75,82 +58,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585497125466">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585497125466" />
-    <state x="686" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1585552242564">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585406906589" />
-    <state x="686" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585552242564" />
-    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585497124507">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585497124507" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585496695179">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585496695179" />
-    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1585513014913">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585513014913" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1585582837058">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585430144698" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585582837058" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1585582837058">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585430144694" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585582837058" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1585582837058">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585430144694" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585582837058" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1585582837058">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585430144694" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585582837058" />
-    <state width="1877" height="198" key="GridCell.Tab.1.bottom" timestamp="1585571001219">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="198" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585571001219" />
-    <state width="1877" height="198" key="GridCell.Tab.1.center" timestamp="1585571001219">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="198" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585571001219" />
-    <state width="1877" height="198" key="GridCell.Tab.1.left" timestamp="1585571001219">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="198" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585571001219" />
-    <state width="1877" height="198" key="GridCell.Tab.1.right" timestamp="1585571001219">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="198" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585571001219" />
-    <state x="-90" y="0" key="SettingsEditor" timestamp="1585407074778">
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1585631079313">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="-90" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585407074778" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585582344207">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585631079313" />
+    <state x="443" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1585630638613">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585582344207" />
-    <state x="342" y="140" key="new project wizard" timestamp="1585513026611">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="443" y="0" key="Diagram.Print.Preview.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1585630638613" />
+    <state x="463" y="96" key="FileChooserDialogImpl" timestamp="1585630573179">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585513026611" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="myMaze.maze" />
-        <watch expression="myMaze" />
-      </configuration>
-    </watches-manager>
+    <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585630573179" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585630950370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585630950370" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585630950370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585630950370" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585630950370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585630950370" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585630950370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585630950370" />
   </component>
 </project>

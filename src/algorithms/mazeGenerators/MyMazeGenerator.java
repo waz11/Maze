@@ -1,73 +1,72 @@
 package algorithms.mazeGenerators;
 
-import javafx.geometry.Pos;
-
-import java.nio.file.Path;
 import java.util.*;
 
 public class MyMazeGenerator extends AMazeGenerator {
     @Override
     public Maze generate(int rows, int cols) {
-        Maze myMaze = new Maze(rows, cols);
+        Maze maze = new Maze(rows, cols);
         Random rand = new Random();
-        Stack<Position> possibleStack = new Stack<>();
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++)
-                myMaze.setValueInMaze(i, j, 1);
+        Stack<Position> walls = new Stack<>();
+        for (int i = 0; i < maze.rows; i++) {
+            for (int j = 0; j < maze.cols; j++)
+                maze.setWall(i, j);
         }
         Position start = new Position(rand.nextInt(rows), rand.nextInt(cols));
-        myMaze.setStart(start);
-        addAdjacent(myMaze, possibleStack, start);
-        while (!possibleStack.isEmpty()) {
-            Position next = possibleStack.pop();
-            Position path = possibleStack.pop();
-            if (myMaze.getValueInMaze(next.getRowIndex(), next.getColumnIndex()) == 1){
-                myMaze.setValueInMaze(path.getRowIndex(), path.getColumnIndex(), 0);
-                addAdjacent(myMaze, possibleStack, next);
+        maze.setStart(start);
+        addWall(maze, walls, start);
+
+        while (!walls.isEmpty()) {
+            Position next = walls.pop();
+            Position path = walls.pop();
+            if (maze.isWall(next)){
+                maze.setPath(path);
+                addWall(maze, walls, next);
             }
         }
+
         Position goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
-        while (goal.equals(start) || myMaze.getValueInMaze(goal.getRowIndex(), goal.getColumnIndex()) == 1){
+        while (goal.equals(start) || maze.isWall(goal)){
             goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
         }
-        myMaze.setGoal(goal);
-        return myMaze;
+        maze.setGoal(goal);
+
+        return maze;
     }
 
-    protected void addAdjacent(Maze myMaze, Stack<Position> adjacentStack, Position position) {
-        myMaze.setValueInMaze(position.getRowIndex(), position.getColumnIndex(), 0);
-        //need to push adjacent randomly
-        ArrayList<Integer> directions = new ArrayList<>();
+    /**
+     * this function add to walls stack all the wall positions around a position
+     * @param maze     - a maze
+     * @param walls    - stack of walls in a maze
+     * @param position - the current Position, Where the route will start from
+     */
+    protected void addWall(Maze maze, Stack<Position> walls, Position position) {
+        maze.setPath(position);
+
+        LinkedList<Integer> directionsBucket = new LinkedList<>();
         for (int i = 0; i < 4; i++)
-            directions.add(i);
-        Collections.shuffle(directions);
-        for (int i = 0; i < 4; i++) {
-            if (directions.get(i) == 0) {
-                if (position.getRowIndex() - 2 >= 0 && myMaze.getValueInMaze(position.getRowIndex() - 2, position.getColumnIndex()) != 0) {
-                    adjacentStack.push(new Position(position.getRowIndex() - 1, position.getColumnIndex()));
-                    adjacentStack.push(new Position(position.getRowIndex() - 2, position.getColumnIndex()));
-                }
+            directionsBucket.add(i);
+        Collections.shuffle(directionsBucket);
+
+        Position farPosition = new Position(0,0);
+        Position nearPosition = new Position(0,0);
+        for(int direction : directionsBucket){
+            if (direction == 0) {
+                farPosition = new Position(position.getRow() - 2, position.getCol());
+                nearPosition = new Position(position.getRow() - 1, position.getCol());
+            } else if (direction == 1) {
+                farPosition = new Position(position.getRow(), position.getCol() + 2);
+                nearPosition = new Position(position.getRow(), position.getCol() + 1);
+            } else if (direction == 2) {
+                farPosition = new Position(position.getRow() + 2, position.getCol());
+                nearPosition = new Position(position.getRow() + 1, position.getCol());
+            } else if (direction == 3) {
+                farPosition = new Position(position.getRow(), position.getCol() - 2);
+                nearPosition = new Position(position.getRow(), position.getCol() - 1);
             }
-            else if (directions.get(i) == 1) {
-                if (position.getColumnIndex() + 2 < myMaze.mazeCols && myMaze.getValueInMaze(position.getRowIndex(), position.getColumnIndex() + 2) != 0) {
-                    adjacentStack.push(new Position(position.getRowIndex(), position.getColumnIndex() + 1));
-                    adjacentStack.push(new Position(position.getRowIndex(), position.getColumnIndex() + 2));
-                }
-            }
-            else if (directions.get(i) == 2) {
-                if (position.getRowIndex() + 2 < myMaze.mazeRows && myMaze.getValueInMaze(position.getRowIndex() + 2, position.getColumnIndex()) != 0) {
-                    adjacentStack.push(new Position(position.getRowIndex() + 1, position.getColumnIndex()));
-                    adjacentStack.push(new Position(position.getRowIndex() + 2, position.getColumnIndex()));
-                }
-            }
-            else if (directions.get(i) == 3) {
-                if (position.getColumnIndex() - 2 >= 0 && myMaze.getValueInMaze(position.getRowIndex(), position.getColumnIndex() - 2) != 0) {
-                    adjacentStack.push(new Position(position.getRowIndex(), position.getColumnIndex() - 1));
-                    adjacentStack.push(new Position(position.getRowIndex(), position.getColumnIndex() - 2));
-                }
-            }
+            walls.push(nearPosition);
+            walls.push(farPosition);
         }
     }
-
 }
 
