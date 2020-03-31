@@ -8,9 +8,9 @@ public class MyMazeGenerator extends AMazeGenerator {
         Maze maze = new Maze(rows, cols);
         Random rand = new Random();
         Stack<Position> walls = new Stack<>();
-        for (int i = 0; i < maze.rows; i++) {
-            for (int j = 0; j < maze.cols; j++)
-                maze.setWall(i, j);
+        for (int row = 0; row < maze.rows; row++) {
+            for (int col = 0; col < maze.cols; col++)
+                maze.setWall(row, col);
         }
         Position start = new Position(rand.nextInt(rows), rand.nextInt(cols));
         maze.setStart(start);
