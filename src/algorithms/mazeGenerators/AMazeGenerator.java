@@ -12,20 +12,19 @@ public abstract class AMazeGenerator implements IMazeGenerator {
     }
 
     /**
-     * this function return two special positions on the edges of a quad,
-     * and ensures that both of them are on different edges of a maze
-     * @param rows - num of rows in the maze
-     * @param cols - num of cols in the maze
-     * @return array of 2 special positions:
-     * position[0] contains Start position of the maze
-     * position[1] contains Goal position of the maze
+     * this function return two special positions on different edges of a quad,
+     * @param rows - num of rows in a maze
+     * @param cols - num of cols in a maze
+     * @return array of 2 special positions while -
+     *          position[0] contains Start position
+     *          position[1] contains Goal position
      */
     protected Position[] getSpecialPositions(int rows, int cols){
         Position[] ans = new Position[2];
         Position startPos, goalPos;
         startPos = getRandomSpecialPosition(rows, cols);
         goalPos = getRandomSpecialPosition(rows, cols);
-        while (sameEdge(startPos, goalPos)){
+        while (sameEdge(startPos, goalPos, rows, cols)){
             goalPos = getRandomSpecialPosition(rows, cols);
         }
         ans[0] = startPos;
@@ -34,36 +33,57 @@ public abstract class AMazeGenerator implements IMazeGenerator {
     }
 
     /**
+     * @param rows - num of rows in the maze
+     * @param cols - num of cols in the maze
+     * @return a random position on one of a quad side by random
+     */
+    protected Position getRandomSpecialPosition(int rows, int cols){
+        Position position;
+        Random rand = new Random();
+        int edge = rand.nextInt(4);
+        if (edge == 0)
+            position = new Position(rand.nextInt(rows), 0);
+        else if (edge == 1)
+            position = new Position(0, rand.nextInt(cols));
+        else if (edge == 2)
+            position = new Position(rand.nextInt(rows), cols-1);
+        else
+            position = new Position(rows-1, rand.nextInt(cols));
+        return position;
+    }
+
+    /**
      * this function notify if two Positions found at the same side of a quad
      * @param p1 - Position 1
      * @param p2 - Position 2
      * @return true - two points at the same edge, false - else;
      */
-    private boolean sameEdge(Position p1, Position p2){
-        int rowsDiff = p1.getRow() - p2.getRow();
-        int colsDiff = p1.getCol() - p2.getCol();
-        boolean ans = (rowsDiff == 0) || (colsDiff == 0);
+    private boolean sameEdge(Position p1, Position p2, int rows, int cols){
+        boolean ans = false;
+        if(getEdge(p1, rows,cols) == getEdge(p2,rows,cols));
+            ans = true;
         return ans;
     }
 
     /**
-     * this function set a position by random
-     * @param rows - num of rows in the maze
-     * @param cols - num of cols in the maze
-     * @return
+     * this function return the quad edge of a position
+     * @param position - position on a quad
+     * @param rows - rows of a quad
+     * @param cols - columns of a quad
+     * @return quad edge while - 0=left, 1=up, 2=right, 3=down
      */
-    protected Position getRandomSpecialPosition(int rows, int cols){
-        Position point;
-        Random rand = new Random();
-        int edge = rand.nextInt(4);
-        if (edge == 0)
-            point = new Position(rand.nextInt(rows), 0);
-        else if (edge == 1)
-            point = new Position(0, rand.nextInt(cols));
-        else if (edge == 2)
-            point = new Position(rand.nextInt(rows), cols-1);
-        else
-            point = new Position(rows-1, rand.nextInt(cols));
-        return point;
+    protected int getEdge(Position position, int rows, int cols){
+        int row = position.getRow();
+        int col = position.getCol();
+        int ans = -1;
+        if(row > 0 && col == 0)
+            ans = 0;
+        else if(row == 0 && col < cols - 1)
+            ans = 1;
+        else if(row < rows-1 && col == cols-1)
+            ans = 2;
+        else if(row == rows-1 && col > 0)
+            ans = 3;
+        return ans;
     }
 }
