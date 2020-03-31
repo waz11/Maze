@@ -83,7 +83,7 @@ public class Maze {
         return false;
     }
 
-    protected boolean isLegalPosition(Position position) {
+    public boolean isLegalPosition(Position position) {
         if (position.getRow() < 0 || position.getRow() >= this.rows || position.getCol() < 0 || position.getCol() >= this.cols)
             return false;
         return true;
