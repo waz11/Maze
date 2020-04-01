@@ -60,13 +60,24 @@ public abstract class AMazeGenerator implements IMazeGenerator {
      */
     private boolean sameEdge(Position p1, Position p2, int rows, int cols){
         boolean ans = false;
-        if(getEdge(p1, rows,cols) == getEdge(p2,rows,cols));
+        int edge1 = getEdge(p1, rows,cols);
+        int edge2 = getEdge(p2, rows,cols);
+        if (edge1 == edge2)
             ans = true;
+        if(edge1%2 != edge2%2){
+            if(p1.getRow() == p2.getRow() || p1.getCol() == p2.getCol())
+                ans = true;
+        }
         return ans;
     }
 
     /**
-     * this function return the quad edge of a position
+
+     * this function return the quad edge of a position- while the quad divided as follows:
+     *     30000
+     *     3***1
+     *     3***1
+     *     22221
      * @param position - position on a quad
      * @param rows - rows of a quad
      * @param cols - columns of a quad
@@ -86,4 +97,5 @@ public abstract class AMazeGenerator implements IMazeGenerator {
             ans = 3;
         return ans;
     }
+
 }
