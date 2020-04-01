@@ -25,11 +25,13 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                 finalSolution = createSolution(curr, start);
             }
             else{
-                if (!visited.contains(curr))
+                if (!visited.contains(curr)) {
+                    this.numberOfNodesEvaluated++;
                     visited.add(curr);
+                }
                 ArrayList<AState> possible = s.getAllSuccessors(curr);
                 for (int i=0; i<possible.size(); i++){
-                    if(!visited.contains(possible.get(i)))
+                    if(!(visited.contains(possible.get(i))))
                         toVisit.add(possible.get(i));
                 }
             }
@@ -45,7 +47,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
             curr = curr.getCameFrom();
         }
         route.add(start);
-        for (int i=route.size()-1; i>=0; i++)
+        for (int i=route.size()-1; i>=0; i--)
             finalSolution.addToSolution(route.get(i));
 
         return finalSolution;
