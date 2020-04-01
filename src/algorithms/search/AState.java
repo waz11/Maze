@@ -18,4 +18,12 @@ public abstract class AState {
     public AState getCameFrom() {
         return cameFrom;
     }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public void setCameFrom(AState cameFrom) {
+        this.cameFrom = cameFrom;
+    }
 }

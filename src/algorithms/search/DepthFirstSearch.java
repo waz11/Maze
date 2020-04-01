@@ -38,18 +38,4 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
         }
         return finalSolution;
     }
-
-    protected Solution createSolution (AState curr, AState start){
-        Solution finalSolution = new Solution();
-        LinkedList<AState> route = new LinkedList<>();
-        while (!(curr.getCameFrom() == null)){
-            route.add(curr);
-            curr = curr.getCameFrom();
-        }
-        route.add(start);
-        for (int i=route.size()-1; i>=0; i--)
-            finalSolution.addToSolution(route.get(i));
-
-        return finalSolution;
-    }
 }
