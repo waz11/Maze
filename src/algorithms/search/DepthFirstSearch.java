@@ -22,18 +22,17 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
 
         while(!toVisit.isEmpty()){
             AState state = toVisit.pop();
-            if (state.equals(goal)){
+            if (state.equals(goal))
                 solution = createSolution(state, start);
-            }
             else{
                 if (!visited.containsKey(state.toString())) {
                     visited.put(state.toString(), state);
                     this.numberOfNodesEvaluated++;
                 }
                 LinkedList<AState> possible = s.getAllSuccessors(state);
-                for (int i=0; i<possible.size(); i++){
-                    if(!(visited.containsKey(possible.get(i).toString())))
-                        toVisit.add(possible.get(i));
+                for(AState st:possible){
+                    if(!(visited.containsKey(st.toString())))
+                        toVisit.add(st);
                 }
             }
         }
