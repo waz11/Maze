@@ -44,9 +44,9 @@ public class SearchableMaze implements ISearchable {
             for(int col = -1; col <= 1; col++){
                 if((row != 0) && (col != 0)){
                     Position position = new Position(row, col);
-                    if(maze.isLegalPosition(position) && maze.isPath(position)){
+                    if((maze.isLegalPosition(position)) && (maze.isPath(position))){
                         int cost = 10;
-                        if(row!=sourceRow && col!=sourceCol)
+                        if((row != sourceRow) && (col != sourceCol))
                             cost = 15;
                         MazeState successor = new MazeState(cost, state, position);
                         successors.add(successor);
@@ -56,5 +56,4 @@ public class SearchableMaze implements ISearchable {
         }
         return successors;
     }
-
 }

@@ -1,15 +1,15 @@
 package algorithms.search;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Solution {
-    ArrayList<AState> solutionPath = new ArrayList<>();
+    LinkedList<AState> solution = new LinkedList<>();
 
-    public ArrayList<AState> getSolutionPath() {
-        return solutionPath;
+    public LinkedList<AState> getSolution() {
+        return solution;
     }
 
-    public void addToSolution(AState newState){
-        solutionPath.add(newState);
+    public boolean addState(AState state){
+        return solution.add(state);
     }
 }

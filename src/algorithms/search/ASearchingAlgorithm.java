@@ -26,7 +26,7 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
         }
         route.add(start);
         for (int i=route.size()-1; i>=0; i--)
-            finalSolution.addToSolution(route.get(i));
+            finalSolution.addState(route.get(i));
 
         return finalSolution;
     }
