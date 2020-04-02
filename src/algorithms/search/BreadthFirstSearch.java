@@ -1,9 +1,6 @@
 package algorithms.search;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class BreadthFirstSearch extends ASearchingAlgorithm {
     public BreadthFirstSearch(){
@@ -12,8 +9,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
 
     public Solution solve(ISearchable s) {
         Solution finalSolution = new Solution();
-        LinkedList<AState> visited = new LinkedList<>();
-        LinkedList<AState> toVisit = new LinkedList<>();
+        Hashtable<String, AState> visited = new Hashtable<>();
+        Queue<AState> toVisit = new LinkedList<>();
 
         AState start = s.getStartState();
         AState goal = s.getGoalState();
@@ -25,18 +22,17 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                 finalSolution = createSolution(curr, start);
             }
             else{
-                if (!visited.contains(curr)) {
-                    this.numberOfNodesEvaluated++;
-                    visited.add(curr);
-                }
+                this.numberOfNodesEvaluated++;
+
                 ArrayList<AState> possible = s.getAllSuccessors(curr);
                 for (int i=0; i<possible.size(); i++){
-                    if(!(visited.contains(possible.get(i))))
+                    if(!(visited.containsKey(possible.get(i).toString()))){
+                        visited.put(possible.get(i).toString(), possible.get(i));
                         toVisit.add(possible.get(i));
+                    }
                 }
             }
         }
         return finalSolution;
         }
-
 }

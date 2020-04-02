@@ -2,7 +2,7 @@ package algorithms.search;
 
 import java.util.Objects;
 
-public abstract class AState {
+public abstract class AState implements Comparable<AState>{
     private double cost;
     private AState cameFrom;
 
@@ -25,5 +25,13 @@ public abstract class AState {
 
     public void setCameFrom(AState cameFrom) {
         this.cameFrom = cameFrom;
+    }
+
+    public int compareTo(AState o){
+        if (this.getCost() > o.getCost())
+            return 1;
+        else if (this.getCost() < o.getCost())
+            return -1;
+        return 0;
     }
 }
