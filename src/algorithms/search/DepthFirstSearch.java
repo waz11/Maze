@@ -2,6 +2,7 @@ package algorithms.search;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class DepthFirstSearch extends ASearchingAlgorithm {
@@ -29,7 +30,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                     visited.put(curr.toString(), curr);
                     this.numberOfNodesEvaluated++;
                 }
-                ArrayList<AState> possible = s.getAllSuccessors(curr);
+                LinkedList<AState> possible = s.getAllSuccessors(curr);
                 for (int i=0; i<possible.size(); i++){
                     if(!(visited.containsKey(possible.get(i).toString())))
                         toVisit.add(possible.get(i));

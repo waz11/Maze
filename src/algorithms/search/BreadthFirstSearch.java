@@ -24,7 +24,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             else{
                 this.numberOfNodesEvaluated++;
 
-                ArrayList<AState> possible = s.getAllSuccessors(curr);
+                LinkedList<AState> possible = s.getAllSuccessors(curr);
                 for (int i=0; i<possible.size(); i++){
                     if(!(visited.containsKey(possible.get(i).toString()))){
                         visited.put(possible.get(i).toString(), possible.get(i));

@@ -4,6 +4,7 @@ import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.Position;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class SearchableMaze implements ISearchable {
     Maze maze;
@@ -26,29 +27,33 @@ public class SearchableMaze implements ISearchable {
         return goalState;
     }
 
-
+    /**
+     *
+     * @param state - a source position
+     * @return - list of all the successors positions from this source state (= legal and path positions)
+     */
     @Override
-    public ArrayList<AState> getAllSuccessors(AState s) {
-        ArrayList<AState> successors = new ArrayList<>();
-        MazeState ms = (MazeState) s;
+    public LinkedList<AState> getAllSuccessors(AState state) {
+        LinkedList<AState> successors = new LinkedList<>();
+        MazeState ms = (MazeState) state;
 
-        if (maze.isLegalPosition(new Position(ms.state.getRow()-1, ms.state.getCol())) && maze.isPath(new Position(ms.state.getRow()-1, ms.state.getCol())))
-            successors.add(new MazeState(ms.getCost() + 10, s, new Position(ms.state.getRow()-1, ms.state.getCol())));
-        if (maze.isLegalPosition(new Position(ms.state.getRow()-1, ms.state.getCol()+1)) && maze.isPath(new Position(ms.state.getRow()-1, ms.state.getCol()+1)) && (maze.isPath(new Position(ms.state.getRow()-1, ms.state.getCol())) || maze.isPath(new Position(ms.state.getRow(), ms.state.getCol()+1))))
-            successors.add(new MazeState(ms.getCost() + 15, s, new Position(ms.state.getRow()-1, ms.state.getCol()+1)));
-        if (maze.isLegalPosition(new Position(ms.state.getRow(), ms.state.getCol()+1)) && maze.isPath(new Position(ms.state.getRow(), ms.state.getCol()+1)))
-            successors.add(new MazeState(ms.getCost() + 10, s, new Position(ms.state.getRow(), ms.state.getCol()+1)));
-        if (maze.isLegalPosition(new Position(ms.state.getRow()+1, ms.state.getCol()+1)) && maze.isPath(new Position(ms.state.getRow()+1, ms.state.getCol()+1)) && (maze.isPath(new Position(ms.state.getRow()+1, ms.state.getCol())) || maze.isPath(new Position(ms.state.getRow(), ms.state.getCol()+1))))
-            successors.add(new MazeState(ms.getCost() + 15, s, new Position(ms.state.getRow()+1, ms.state.getCol()+1)));
-        if (maze.isLegalPosition(new Position(ms.state.getRow()+1, ms.state.getCol())) && maze.isPath(new Position(ms.state.getRow()+1, ms.state.getCol())))
-            successors.add(new MazeState(ms.getCost() + 10, s, new Position(ms.state.getRow()+1, ms.state.getCol())));
-        if (maze.isLegalPosition(new Position(ms.state.getRow()+1, ms.state.getCol()-1)) && maze.isPath(new Position(ms.state.getRow()+1, ms.state.getCol()-1)) && (maze.isPath(new Position(ms.state.getRow()+1, ms.state.getCol())) || maze.isPath(new Position(ms.state.getRow(), ms.state.getCol()-1))))
-            successors.add(new MazeState(ms.getCost() + 15, s, new Position(ms.state.getRow()+1, ms.state.getCol()-1)));
-        if (maze.isLegalPosition(new Position(ms.state.getRow(), ms.state.getCol()-1)) && maze.isPath(new Position(ms.state.getRow(), ms.state.getCol()-1)))
-            successors.add(new MazeState(ms.getCost() + 10, s, new Position(ms.state.getRow(), ms.state.getCol()-1)));
-        if (maze.isLegalPosition(new Position(ms.state.getRow()-1, ms.state.getCol()-1)) && maze.isPath(new Position(ms.state.getRow()-1, ms.state.getCol()-1)) && (maze.isPath(new Position(ms.state.getRow()-1, ms.state.getCol())) || maze.isPath(new Position(ms.state.getRow(), ms.state.getCol()-1))))
-            successors.add(new MazeState(ms.getCost() + 15, s, new Position(ms.state.getRow()-1, ms.state.getCol()-1)));
+        int sourceRow = ms.state.getRow();
+        int sourceCol = ms.state.getCol();
 
+        for(int row = -1; row <= 1; row++){
+            for(int col = -1; col <= 1; col++){
+                if((row != 0) && (col != 0)){
+                    Position position = new Position(row, col);
+                    if(maze.isLegalPosition(position) && maze.isPath(position)){
+                        int cost = 10;
+                        if(row!=sourceRow && col!=sourceCol)
+                            cost = 15;
+                        MazeState successor = new MazeState(cost, state, position);
+                        successors.add(successor);
+                    }
+                }
+            }
+        }
         return successors;
     }
 
