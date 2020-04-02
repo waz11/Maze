@@ -14,14 +14,14 @@ public class SearchableMaze implements ISearchable {
 
     @Override
     public AState getStartState() {
-        Position start = maze.getStart();
+        Position start = maze.getStartPosition();
         MazeState startState = new MazeState(0, null, start);
         return startState;
     }
 
     @Override
     public AState getGoalState() {
-        Position goal = maze.getGoal();
+        Position goal = maze.getGoalPosition();
         MazeState goalState = new MazeState(0, null, goal);
         return goalState;
     }

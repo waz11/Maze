@@ -15,15 +15,15 @@ public class SimpleMazeGenerator extends AMazeGenerator {
                 if (value%5 == 0)
                     maze.setWall(i,j);
                 else
-                    maze.setWall(i,j);
+                    maze.setPath(i,j);
             }
         }
         Position[] specialPositions = getSpecialPositions(rows,cols);
         maze.setStart(specialPositions[0]);
         maze.setGoal(specialPositions[1]);
 
-        maze.setPath(maze.getStart());
-        maze.setPath(maze.getGoal());
+        maze.setPath(maze.getStartPosition());
+        maze.setPath(maze.getGoalPosition());
         return maze;
     }
 }

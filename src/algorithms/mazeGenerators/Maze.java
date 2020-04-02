@@ -26,20 +26,20 @@ public class Maze {
         this.goal = goal;
     }
 
-    public Position getStart() {
+    public Position getStartPosition() {
         return start;
     }
 
-    public Position getGoal() {
+    public Position getGoalPosition() {
         return goal;
     }
 
     protected boolean isStart(int i, int j) {
-        return (i == this.getStart().getRow() && j == this.getStart().getCol());
+        return (i == this.start.getRow() && j == this.start.getCol());
     }
 
     protected boolean isGoal(int i, int j) {
-        return (i == this.getGoal().getRow() && j == this.getGoal().getCol());
+        return (i == this.goal.getRow() && j == this.goal.getCol());
     }
 
 

@@ -5,15 +5,15 @@ import java.util.Hashtable;
 import java.util.Stack;
 
 public class DepthFirstSearch extends ASearchingAlgorithm {
-    public DepthFirstSearch() {
-        this.Name = "DFS";
-    }
 
     @Override
     public Solution solve(ISearchable s) {
         Solution finalSolution = new Solution();
         Stack<AState> toVisit = new Stack<>();
         Hashtable<String, AState> visited = new Hashtable<>();
+
+        if (s==null)
+            return finalSolution;
 
         AState start = s.getStartState();
         AState goal = s.getGoalState();

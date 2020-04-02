@@ -3,14 +3,14 @@ package algorithms.search;
 import java.util.*;
 
 public class BreadthFirstSearch extends ASearchingAlgorithm {
-    public BreadthFirstSearch(){
-        this.Name = "BFS";
-    }
 
     public Solution solve(ISearchable s) {
         Solution finalSolution = new Solution();
         Hashtable<String, AState> visited = new Hashtable<>();
         Queue<AState> toVisit = new LinkedList<>();
+
+        if (s==null)
+            return finalSolution;
 
         AState start = s.getStartState();
         AState goal = s.getGoalState();
