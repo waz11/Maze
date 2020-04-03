@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Stack;
@@ -33,7 +34,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                     }
                     LinkedList<AState> possible = s.getAllSuccessors(state);
                     for (AState st : possible) {
-                        if (isWhite(state))
+                        if (isWhite(st))
                             states.add(st);
                     }
                 }
@@ -51,4 +52,5 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
     private void paintGray(AState state) {
         grayStates.put(state.toString(), state);
     }
+
 }

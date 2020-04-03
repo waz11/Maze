@@ -42,13 +42,13 @@ public class SearchableMaze implements ISearchable {
 
         for(int row = -1; row <= 1; row++){
             for(int col = -1; col <= 1; col++){
-                if((row != 0) && (col != 0)){
-                    Position position = new Position(row, col);
+                if(!((row == 0) && (col == 0))){
+                    Position position = new Position(sourceRow+row, sourceCol+col);
                     if((maze.isLegalPosition(position)) && (maze.isPath(position))){
                         int cost = 10;
                         if((row != sourceRow) && (col != sourceCol))
                             cost = 15;
-                        MazeState successor = new MazeState(cost, state, position);
+                        MazeState successor = new MazeState(ms.getCost()+cost, state, position);
                         successors.add(successor);
                     }
                 }

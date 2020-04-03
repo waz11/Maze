@@ -3,13 +3,13 @@ package algorithms.search;
 import java.util.ArrayList;
 
 public class Solution {
-    ArrayList<AState> solution = new ArrayList<>();
+    ArrayList<AState> solutionPath = new ArrayList<>();
 
-    public ArrayList<AState> getSolution() {
-        return solution;
+    public ArrayList<AState> getSolutionPath() {
+        return solutionPath;
     }
 
-    public boolean addState(AState state){
-        return solution.add(state);
+    public void addToSolution(AState newState){
+        solutionPath.add(newState);
     }
 }

@@ -6,7 +6,6 @@ import algorithms.mazeGenerators.MyMazeGenerator;
 import algorithms.search.*;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class RunSearchOnMaze {
     public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class RunSearchOnMaze {
         System.out.println(String.format("'%s' algorithm - nodes evaluated: %s", searcher.getName(), searcher.getNumberOfNodesEvaluated()));
         //Printing Solution Path
         System.out.println("Solution path:");
-        ArrayList<AState> solutionPath = solution.getSolution();
+        ArrayList<AState> solutionPath = solution.getSolutionPath();
         for (int i = 0; i < solutionPath.size(); i++) {
             System.out.println(String.format("%s. %s",i,solutionPath.get(i)));
         }
