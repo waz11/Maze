@@ -1,6 +1,5 @@
 package algorithms.search;
 
-import java.security.PrivateKey;
 import java.util.*;
 
 public class BreadthFirstSearch extends ASearchingAlgorithm {
@@ -26,7 +25,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                     solution = createSolution(state, start);
                 else {
                     this.numberOfNodesEvaluated++;
-                    LinkedList<AState> possible = s.getAllSuccessors(state);
+                    LinkedList<AState> possible = s.getAllPossibleStates(state);
                     for (AState st : possible) {
                         if (isWhite(st)) {
                             paintGray(st);

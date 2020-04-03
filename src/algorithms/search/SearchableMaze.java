@@ -2,6 +2,7 @@ package algorithms.search;
 
 import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.Position;
+
 import java.util.LinkedList;
 
 public class SearchableMaze implements ISearchable {
@@ -26,32 +27,53 @@ public class SearchableMaze implements ISearchable {
     }
 
     /**
-     *
      * @param state - a source position
      * @return - list of all the successors positions from this source state (= legal and path positions)
      */
     @Override
-    public LinkedList<AState> getAllSuccessors(AState state) {
+    public LinkedList<AState> getAllPossibleStates(AState state) {
         LinkedList<AState> successors = new LinkedList<>();
         MazeState ms = (MazeState) state;
 
         int sourceRow = ms.state.getRow();
         int sourceCol = ms.state.getCol();
 
-        for(int row = -1; row <= 1; row++){
-            for(int col = -1; col <= 1; col++){
-                if(!((row == 0) && (col == 0))){
-                    Position position = new Position(sourceRow+row, sourceCol+col);
-                    if((maze.isLegalPosition(position)) && (maze.isPath(position))){
+        for (int row = -1; row <= 1; row++) {
+            for (int col = -1; col <= 1; col++) {
+                if ((row != 0) || (col != 0)) {
+                    Position position = new Position(sourceRow + row, sourceCol + col);
+                    if ((maze.isLegalPosition(position)) && (maze.isPath(position))) {
                         int cost = 10;
-                        if((row != sourceRow) && (col != sourceCol))
-                            cost = 15;
-                        MazeState successor = new MazeState(ms.getCost()+cost, state, position);
-                        successors.add(successor);
+                        // diagonal = two side move
+                        if ((row != 0) && (col != 0)) {
+                            Position position1 = new Position(sourceRow+row, sourceCol);
+                            Position position2 = new Position(sourceRow, sourceCol+col);
+                            boolean path1 = maze.isLegalPosition(position1) && maze.isPath(position1);
+                            boolean path2 = maze.isLegalPosition(position1) && maze.isPath(position1);
+                            if(path1 || path2){
+                                cost = 15;
+                                MazeState successor = new MazeState(ms.getCost() + cost, state, position);
+                                successors.add(successor);
+                            }
+                        }
+                        // one side move
+                        else {
+                            MazeState successor = new MazeState(ms.getCost() + cost, state, position);
+                            successors.add(successor);
+                        }
                     }
                 }
             }
         }
         return successors;
+    }
+
+
+    private boolean diagonalPathExist(Position position) {
+        if (!maze.isPath(position))
+            return false;
+
+
+        return true;
     }
 }

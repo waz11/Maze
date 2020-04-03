@@ -11,8 +11,8 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         Random rand = new Random();
         for (int i=0; i<rows; i++){
             for (int j=0; j<cols; j++){
-                int value = rand.nextInt(5);
-                if (value%5 == 0)
+                int value = rand.nextInt(2);
+                if (value == 1)
                     maze.setWall(i,j);
                 else
                     maze.setPath(i,j);

@@ -25,7 +25,7 @@ public class BestFirstSearch extends BreadthFirstSearch {
                     solution = createSolution(state, start);
                 } else {
                     this.numberOfNodesEvaluated++;
-                    LinkedList<AState> possible = s.getAllSuccessors(state);
+                    LinkedList<AState> possible = s.getAllPossibleStates(state);
                     for (AState st : possible) {
                         if (isWhite(st)) {
                             paintGray(st);
