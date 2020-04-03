@@ -29,7 +29,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                 else {
                     if (isWhite(state)) {
                         paintGray(state);
-                        this.length++;
+                        this.numberOfNodesEvaluated++;
                     }
                     LinkedList<AState> possible = s.getAllSuccessors(state);
                     for (AState st : possible) {

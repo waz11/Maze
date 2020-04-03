@@ -25,7 +25,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                 if (state.equals(goal))
                     solution = createSolution(state, start);
                 else {
-                    this.length++;
+                    this.numberOfNodesEvaluated++;
                     LinkedList<AState> possible = s.getAllSuccessors(state);
                     for (AState st : possible) {
                         if (isWhite(st)) {

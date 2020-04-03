@@ -4,19 +4,19 @@ import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     private String Name;
-    protected int length;
+    protected int numberOfNodesEvaluated;
 
     public ASearchingAlgorithm() {
         this.Name = this.getClass().toString();
-        this.length = 0;
+        this.numberOfNodesEvaluated = 0;
     }
 
     public String getName() {
         return this.Name;
     }
 
-    public int getLength() {
-        return length;
+    public int getNumberOfNodesEvaluated() {
+        return numberOfNodesEvaluated;
     }
 
     protected Solution createSolution(AState state, AState start) {
@@ -31,5 +31,4 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
             sol.addState(states.pop());
         return sol;
     }
-
 }
