@@ -1,11 +1,11 @@
 package algorithms.search;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Solution {
-    LinkedList<AState> solution = new LinkedList<>();
+    ArrayList<AState> solution = new ArrayList<>();
 
-    public LinkedList<AState> getSolution() {
+    public ArrayList<AState> getSolution() {
         return solution;
     }
 

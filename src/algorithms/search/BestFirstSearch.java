@@ -22,7 +22,7 @@ public class BestFirstSearch extends BreadthFirstSearch {
                 finalSolution = createSolution(curr, start);
             }
             else{
-                this.numberOfNodesEvaluated++;
+                this.length++;
 
                 LinkedList<AState> possible = s.getAllSuccessors(curr);
                 for (int i=0; i<possible.size(); i++){

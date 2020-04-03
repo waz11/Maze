@@ -1,34 +1,35 @@
 package algorithms.search;
 
-import java.util.LinkedList;
+import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     String Name;
-    int numberOfNodesEvaluated;
+    int length;
 
     public ASearchingAlgorithm() {
         this.Name = this.getClass().toString();
-        this.numberOfNodesEvaluated = 0;
+        this.length = 0;
     }
 
-    public String getName(){return this.Name;}
-
-    public int getNumberOfNodesEvaluated() {
-        return numberOfNodesEvaluated;
+    public String getName() {
+        return this.Name;
     }
 
-    protected Solution createSolution (AState curr, AState start){
-        Solution finalSolution = new Solution();
-        LinkedList<AState> route = new LinkedList<>();
-        while (!(curr.getSource() == null)){
-            route.add(curr);
-            curr = curr.getSource();
+    public int getLength() {
+        return length;
+    }
+
+    protected Solution createSolution(AState state, AState start) {
+        Solution sol = new Solution();
+        Stack<AState> states = new Stack<>();
+        while (state.getSource() != null) {
+            states.add(state);
+            state = state.getSource();
         }
-        route.add(start);
-        for (int i=route.size()-1; i>=0; i--)
-            finalSolution.addState(route.get(i));
-
-        return finalSolution;
+        states.add(start);
+        while (!states.isEmpty())
+            sol.addState(states.pop());
+        return sol;
     }
 
 }
