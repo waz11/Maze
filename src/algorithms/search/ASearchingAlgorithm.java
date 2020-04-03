@@ -1,6 +1,5 @@
 package algorithms.search;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
@@ -19,12 +18,12 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
         return numberOfNodesEvaluated;
     }
 
-    protected Solution createSolution (AState curr, AState start){
+    protected Solution createSolution (AState state, AState start){
         Solution finalSolution = new Solution();
         LinkedList<AState> route = new LinkedList<>();
-        while (!(curr.getCameFrom() == null)){
-            route.add(curr);
-            curr = curr.getCameFrom();
+        while (!(state.getSource() == null)){
+            route.add(state);
+            state = state.getSource();
         }
         route.add(start);
         for (int i=route.size()-1; i>=0; i--)
