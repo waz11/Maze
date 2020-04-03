@@ -1,6 +1,7 @@
 package algorithms.search;
 
 import java.util.LinkedList;
+import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     String Name;
@@ -19,17 +20,15 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     }
 
     protected Solution createSolution (AState state, AState start){
-        Solution finalSolution = new Solution();
-        LinkedList<AState> route = new LinkedList<>();
-        while (!(state.getSource() == null)){
-            route.add(state);
+        Solution solution = new Solution();
+        Stack<AState> states = new Stack<>();
+        while (state.getSource() != null){
+            states.add(state);
             state = state.getSource();
         }
-        route.add(start);
-        for (int i=route.size()-1; i>=0; i--)
-            finalSolution.addToSolution(route.get(i));
-
-        return finalSolution;
+        states.add(start);
+        while (!states.isEmpty())
+            solution.addState(states.pop());
+        return solution;
     }
-
 }

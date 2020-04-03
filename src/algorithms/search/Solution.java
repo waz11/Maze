@@ -9,7 +9,7 @@ public class Solution {
         return solutionPath;
     }
 
-    public void addToSolution(AState newState){
+    public void addState(AState newState){
         solutionPath.add(newState);
     }
 }
