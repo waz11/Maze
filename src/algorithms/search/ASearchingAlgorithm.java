@@ -3,8 +3,8 @@ package algorithms.search;
 import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
-    String Name;
-    int length;
+    private String Name;
+    protected int length;
 
     public ASearchingAlgorithm() {
         this.Name = this.getClass().toString();
