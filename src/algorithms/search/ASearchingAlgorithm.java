@@ -7,7 +7,6 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     String Name;
     int numberOfNodesEvaluated;
 
-
     public ASearchingAlgorithm() {
         this.Name = this.getClass().toString();
         this.numberOfNodesEvaluated = 0;
