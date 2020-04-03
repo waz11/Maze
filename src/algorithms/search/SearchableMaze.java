@@ -46,11 +46,7 @@ public class SearchableMaze implements ISearchable {
                         int cost = 10;
                         // diagonal = two side move
                         if ((row != 0) && (col != 0)) {
-                            Position position1 = new Position(sourceRow+row, sourceCol);
-                            Position position2 = new Position(sourceRow, sourceCol+col);
-                            boolean path1 = maze.isLegalPosition(position1) && maze.isPath(position1);
-                            boolean path2 = maze.isLegalPosition(position1) && maze.isPath(position1);
-                            if(path1 || path2){
+                            if(diagonalPathExist(position, row, col)){
                                 cost = 15;
                                 MazeState successor = new MazeState(ms.getCost() + cost, state, position);
                                 successors.add(successor);
@@ -69,11 +65,14 @@ public class SearchableMaze implements ISearchable {
     }
 
 
-    private boolean diagonalPathExist(Position position) {
-        if (!maze.isPath(position))
-            return false;
-
-
-        return true;
+    private boolean diagonalPathExist(Position position, int row, int col) {
+        int sourceRow = position.getRow();
+        int sourceCol = position.getCol();
+        Position position1 = new Position(sourceRow+row, sourceCol);
+        Position position2 = new Position(sourceRow, sourceCol+col);
+        boolean path1 = maze.isLegalPosition(position1) && maze.isPath(position1);
+        boolean path2 = maze.isLegalPosition(position2) && maze.isPath(position2);
+        boolean ans = path1 || path2;
+        return ans;
     }
 }
