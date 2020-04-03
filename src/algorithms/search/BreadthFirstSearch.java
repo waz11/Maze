@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.security.PrivateKey;
 import java.util.*;
 
 public class BreadthFirstSearch extends ASearchingAlgorithm {
@@ -19,23 +20,34 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             AState goal = s.getGoalState();
             states.add(start);
 
-            while (states.size() != 0) {
+            while (!states.isEmpty()) {
                 AState state = states.poll();
                 if (state.equals(goal))
                     solution = createSolution(state, start);
                 else {
                     this.length++;
-
                     LinkedList<AState> possible = s.getAllSuccessors(state);
-                    for (int i = 0; i < possible.size(); i++) {
-                        if (!(grayStates.containsKey(possible.get(i).toString()))) {
-                            grayStates.put(possible.get(i).toString(), possible.get(i));
-                            states.add(possible.get(i));
+                    for (AState st : possible) {
+                        if (isWhite(st)) {
+                            paintGray(st);
+                            states.add(st);
                         }
                     }
                 }
             }
         }
         return solution;
+    }
+
+    private boolean isWhite(AState state) {
+        return !grayStates.containsKey(state.toString());
+    }
+
+    private boolean isGray(AState state) {
+        return grayStates.containsKey(state.toString());
+    }
+
+    private void paintGray(AState state) {
+        grayStates.put(state.toString(), state);
     }
 }

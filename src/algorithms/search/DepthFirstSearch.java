@@ -28,7 +28,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                     solution = createSolution(state, start);
                 else {
                     if (isWhite(state)) {
-                        grayStates.put(state.toString(), state);
+                        paintGray(state);
                         this.length++;
                     }
                     LinkedList<AState> possible = s.getAllSuccessors(state);
@@ -47,5 +47,8 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
     }
     private boolean isGray(AState state){
         return grayStates.containsKey(state.toString());
+    }
+    private void paintGray(AState state) {
+        grayStates.put(state.toString(), state);
     }
 }
