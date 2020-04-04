@@ -1,29 +1,66 @@
 package algorithms.mazeGenerators;
 
+import java.util.LinkedList;
 import java.util.Random;
 
-//Still need to define a start and end positions
-//We need to define walls:empty and the random method will work with it
 public class SimpleMazeGenerator extends AMazeGenerator {
-    @Override
+    private LinkedList<Position> solution;
+    private Maze maze;
+    private Position start;
+    private Position goal;
+
+    public SimpleMazeGenerator() {
+        this.solution = new LinkedList<>();
+    }
+
     public Maze generate(int rows, int cols) {
-        Maze maze = new Maze(rows,cols);
-        Random rand = new Random();
-        for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
-                int value = rand.nextInt(5);
-                if (value%5 ==0)
-                    maze.setWall(i,j);
-                else
-                    maze.setPath(i,j);
+        this.maze = new Maze(rows,cols);
+        Position[] sp = getSpecialPositions(rows,cols);
+        start = sp[0];
+        goal = sp[1];
+        maze.setStart(start);
+        maze.setGoal(goal);
+        makeSolution();
+        for(int row = 0; row<rows; row++){
+            for(int col=0; col<cols; col++){
+                Position position = new Position(row,col);
+                if((maze.isPath(position)) && !solution.contains(position)) {
+                    setRandomType(position);
+                }
             }
         }
-        Position[] specialPositions = getSpecialPositions(rows,cols);
-        maze.setStart(specialPositions[0]);
-        maze.setGoal(specialPositions[1]);
-
-        maze.setPath(maze.getStartPosition());
-        maze.setPath(maze.getGoalPosition());
-        return maze;
+        return this.maze;
     }
+
+    private void makeSolution(){
+        int advance = 0;
+        if(start.getRow() < goal.getRow())
+            advance = 1;
+        if(start.getRow() > goal.getRow())
+            advance = -1;
+        int row = start.getRow();
+        int col = start.getCol();
+        while(row != goal.getRow()) {
+            row = row + advance;
+            Position p = new Position(row, col);
+            solution.add(p);
+        }
+        advance = 0;
+        if(start.getCol() < goal.getCol())
+            advance = 1;
+        if(start.getCol() > goal.getCol())
+            advance = -1;
+        while(col != goal.getCol()) {
+            col = col + advance;
+            Position p = new Position(row, col);
+            solution.add(p);
+        }
+    }
+
+    private void setRandomType(Position position){
+        Random random = new Random();
+        if(random.nextBoolean())
+            maze.setWall(position);
+    }
+
 }
