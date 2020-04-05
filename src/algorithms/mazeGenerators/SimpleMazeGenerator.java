@@ -20,7 +20,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         goal = sp[1];
         this.maze.setStart(start);
         this.maze.setGoal(goal);
-        makeSolution();
+        paveSolution();
         for(int row = 0; row<rows; row++){
             for(int col=0; col<cols; col++){
                 Position position = new Position(row,col);
@@ -31,7 +31,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         return maze;
     }
 
-    private void makeSolution(){
+    private void paveSolution(){
         LinkedList<Integer> rowIndexes = goToIndex(start.getRow(), goal.getRow());
         for(int row : rowIndexes){
             Position p = new Position(row, start.getCol());
@@ -61,7 +61,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
 
     private void setRandomType(Position position){
         Random random = new Random();
-        if(random.nextBoolean())
+        if(random.nextInt(3) < 2)
             maze.setWall(position);
     }
 

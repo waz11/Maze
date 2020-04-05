@@ -1,7 +1,5 @@
 package algorithms.mazeGenerators;
 
-import javafx.geometry.Pos;
-
 public class Maze {
     private int[][] maze;
     private Position start;

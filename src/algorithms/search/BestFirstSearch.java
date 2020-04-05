@@ -14,6 +14,8 @@ public class BestFirstSearch extends BreadthFirstSearch {
     }
 
     public Solution solve(ISearchable s) {
+
+
         if (s != null) {
             AState start = s.getStartState();
             AState goal = s.getGoalState();
