@@ -18,43 +18,45 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         Position[] sp = getSpecialPositions(rows,cols);
         start = sp[0];
         goal = sp[1];
-        maze.setStart(start);
-        maze.setGoal(goal);
+        this.maze.setStart(start);
+        this.maze.setGoal(goal);
         makeSolution();
         for(int row = 0; row<rows; row++){
             for(int col=0; col<cols; col++){
                 Position position = new Position(row,col);
-                if((maze.isPath(position)) && !solution.contains(position)) {
+                if((maze.isPath(position)) && !solution.contains(position))
                     setRandomType(position);
-                }
             }
         }
-        return this.maze;
+        return maze;
     }
 
     private void makeSolution(){
+        LinkedList<Integer> rowIndexes = goToIndex(start.getRow(), goal.getRow());
+        for(int row : rowIndexes){
+            Position p = new Position(row, start.getCol());
+            this.solution.add(p);
+        }
+
+        LinkedList<Integer> colIndexes = goToIndex(start.getCol(), goal.getCol());
+        for(int col : colIndexes){
+            Position p = new Position(rowIndexes.getLast(), col);
+            solution.add(p);
+        }
+    }
+
+    private LinkedList<Integer> goToIndex(int currIndex, int destIndex){
+        LinkedList<Integer> indexes = new LinkedList<>();
         int advance = 0;
-        if(start.getRow() < goal.getRow())
+        if(currIndex < destIndex)
             advance = 1;
-        if(start.getRow() > goal.getRow())
+        else if(currIndex > destIndex)
             advance = -1;
-        int row = start.getRow();
-        int col = start.getCol();
-        while(row != goal.getRow()) {
-            row = row + advance;
-            Position p = new Position(row, col);
-            solution.add(p);
+        while(currIndex != destIndex) {
+            currIndex += advance;
+            indexes.add(currIndex);
         }
-        advance = 0;
-        if(start.getCol() < goal.getCol())
-            advance = 1;
-        if(start.getCol() > goal.getCol())
-            advance = -1;
-        while(col != goal.getCol()) {
-            col = col + advance;
-            Position p = new Position(row, col);
-            solution.add(p);
-        }
+        return indexes;
     }
 
     private void setRandomType(Position position){
