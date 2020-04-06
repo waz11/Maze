@@ -1,15 +1,15 @@
 package algorithms.search;
 
 public abstract class AState implements Comparable<AState>{
-    private double cost;
+    private int cost;
     private AState source;
 
-    public AState(double cost, AState source) {
+    public AState(int cost, AState source) {
         this.cost = cost;
         this.source = source;
     }
 
-    public double getCost() {
+    public int getCost() {
         return cost;
     }
 
@@ -17,7 +17,7 @@ public abstract class AState implements Comparable<AState>{
         return source;
     }
 
-    public void setCost(double cost) {
+    public void setCost(int cost) {
         this.cost = cost;
     }
 

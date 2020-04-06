@@ -7,7 +7,7 @@ import java.util.Objects;
 public class MazeState extends AState {
     Position state;
 
-    public MazeState(double cost, AState source, Position state) {
+    public MazeState(int cost, AState source, Position state) {
         super(cost, source);
         this.state = state;
     }
