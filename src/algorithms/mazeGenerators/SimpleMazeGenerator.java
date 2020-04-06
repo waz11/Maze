@@ -32,13 +32,12 @@ public class SimpleMazeGenerator extends AMazeGenerator {
     }
 
     private void paveSolution(){
-        LinkedList<Integer> rowIndexes = goToIndex(start.getRow(), goal.getRow());
+        LinkedList<Integer> rowIndexes = goToIndex(start.getRowIndex(), goal.getRowIndex());
         for(int row : rowIndexes){
-            Position p = new Position(row, start.getCol());
+            Position p = new Position(row, start.getColumnIndex());
             this.solution.add(p);
         }
-
-        LinkedList<Integer> colIndexes = goToIndex(start.getCol(), goal.getCol());
+        LinkedList<Integer> colIndexes = goToIndex(start.getColumnIndex(), goal.getColumnIndex());
         for(int col : colIndexes){
             Position p = new Position(rowIndexes.getLast(), col);
             solution.add(p);

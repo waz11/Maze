@@ -35,8 +35,8 @@ public class SearchableMaze implements ISearchable {
         LinkedList<AState> successors = new LinkedList<>();
         MazeState ms = (MazeState) state;
 
-        int sourceRow = ms.state.getRow();
-        int sourceCol = ms.state.getCol();
+        int sourceRow = ms.state.getRowIndex();
+        int sourceCol = ms.state.getColumnIndex();
 
         for (int row = -1; row <= 1; row++) {
             for (int col = -1; col <= 1; col++) {
@@ -66,8 +66,8 @@ public class SearchableMaze implements ISearchable {
 
 
     private boolean diagonalPathExist(Position position, int row, int col) {
-        int sourceRow = position.getRow();
-        int sourceCol = position.getCol();
+        int sourceRow = position.getRowIndex();
+        int sourceCol = position.getColumnIndex();
         Position position1 = new Position(sourceRow+row, sourceCol);
         Position position2 = new Position(sourceRow, sourceCol+col);
         boolean path1 = maze.isLegalPosition(position1) && maze.isPath(position1);

@@ -52,17 +52,17 @@ public class MyMazeGenerator extends AMazeGenerator {
         Position nearPosition = new Position(0,0);
         for(int direction : directionsBucket){
             if (direction == 0) {
-                farPosition = new Position(position.getRow() - 2, position.getCol());
-                nearPosition = new Position(position.getRow() - 1, position.getCol());
+                farPosition = new Position(position.getRowIndex() - 2, position.getColumnIndex());
+                nearPosition = new Position(position.getRowIndex() - 1, position.getColumnIndex());
             } else if (direction == 1) {
-                farPosition = new Position(position.getRow(), position.getCol() + 2);
-                nearPosition = new Position(position.getRow(), position.getCol() + 1);
+                farPosition = new Position(position.getRowIndex(), position.getColumnIndex() + 2);
+                nearPosition = new Position(position.getRowIndex(), position.getColumnIndex() + 1);
             } else if (direction == 2) {
-                farPosition = new Position(position.getRow() + 2, position.getCol());
-                nearPosition = new Position(position.getRow() + 1, position.getCol());
+                farPosition = new Position(position.getRowIndex() + 2, position.getColumnIndex());
+                nearPosition = new Position(position.getRowIndex() + 1, position.getColumnIndex());
             } else if (direction == 3) {
-                farPosition = new Position(position.getRow(), position.getCol() - 2);
-                nearPosition = new Position(position.getRow(), position.getCol() - 1);
+                farPosition = new Position(position.getRowIndex(), position.getColumnIndex() - 2);
+                nearPosition = new Position(position.getRowIndex(), position.getColumnIndex() - 1);
             }
             walls.push(nearPosition);
             walls.push(farPosition);

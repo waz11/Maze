@@ -65,7 +65,7 @@ public abstract class AMazeGenerator implements IMazeGenerator {
         if (edge1 == edge2)
             ans = true;
         if(edge1%2 != edge2%2){
-            if(p1.getRow() == p2.getRow() || p1.getCol() == p2.getCol())
+            if(p1.getRowIndex() == p2.getRowIndex() || p1.getColumnIndex() == p2.getColumnIndex())
                 ans = true;
         }
         return ans;
@@ -84,8 +84,8 @@ public abstract class AMazeGenerator implements IMazeGenerator {
      * @return quad edge while - 0=left, 1=up, 2=right, 3=down
      */
     protected int getEdge(Position position, int rows, int cols){
-        int row = position.getRow();
-        int col = position.getCol();
+        int row = position.getRowIndex();
+        int col = position.getColumnIndex();
         int ans = -1;
         if(row > 0 && col == 0)
             ans = 0;

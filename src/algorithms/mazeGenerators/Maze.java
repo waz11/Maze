@@ -15,12 +15,12 @@ public class Maze {
 
     /* START AND GOAL POSITIONS*/
     public void setStart(Position start) {
-        maze[start.getRow()][start.getCol()] = 0;
+        maze[start.getRowIndex()][start.getColumnIndex()] = 0;
         this.start = start;
     }
 
     public void setGoal(Position goal) {
-        maze[start.getRow()][start.getCol()] = 0;
+        maze[start.getRowIndex()][start.getColumnIndex()] = 0;
         this.goal = goal;
     }
 
@@ -33,11 +33,11 @@ public class Maze {
     }
 
     protected boolean isStart(int i, int j) {
-        return (i == this.start.getRow() && j == this.start.getCol());
+        return (i == this.start.getRowIndex() && j == this.start.getColumnIndex());
     }
 
     protected boolean isGoal(int i, int j) {
-        return (i == this.goal.getRow() && j == this.goal.getCol());
+        return (i == this.goal.getRowIndex() && j == this.goal.getColumnIndex());
     }
 
 
@@ -45,7 +45,7 @@ public class Maze {
     public boolean setPath(Position position) {
         if (!(isLegalPosition(position)))
             return false;
-        maze[position.getRow()][position.getCol()] = 0;
+        maze[position.getRowIndex()][position.getColumnIndex()] = 0;
         return true;
     }
     public boolean setPath(int i, int j) {
@@ -56,7 +56,7 @@ public class Maze {
     public boolean setWall(Position position) {
         if (!(isLegalPosition(position)))
             return false;
-        maze[position.getRow()][position.getCol()] = 1;
+        maze[position.getRowIndex()][position.getColumnIndex()] = 1;
         return true;
     }
 
@@ -68,7 +68,7 @@ public class Maze {
     public boolean isWall(Position position) {
         if (!isLegalPosition(position))
             return false;
-        if(this.maze[position.getRow()][position.getCol()] == 1)
+        if(this.maze[position.getRowIndex()][position.getColumnIndex()] == 1)
             return true;
         return false;
     }
@@ -76,13 +76,13 @@ public class Maze {
     public boolean isPath(Position position) {
         if (!isLegalPosition(position))
             return false;
-        if(this.maze[position.getRow()][position.getCol()] == 0)
+        if(this.maze[position.getRowIndex()][position.getColumnIndex()] == 0)
             return true;
         return false;
     }
 
     public boolean isLegalPosition(Position position) {
-        if (position.getRow() < 0 || position.getRow() >= this.rows || position.getCol() < 0 || position.getCol() >= this.cols)
+        if (position.getRowIndex() < 0 || position.getRowIndex() >= this.rows || position.getColumnIndex() < 0 || position.getColumnIndex() >= this.cols)
             return false;
         return true;
     }
