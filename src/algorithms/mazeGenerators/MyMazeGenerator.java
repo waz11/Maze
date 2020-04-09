@@ -24,13 +24,26 @@ public class MyMazeGenerator extends AMazeGenerator {
                 addWall(maze, walls, next);
             }
         }
-
+        boolean AllWalls = true;
+        for (int i=0; i<maze.rows; i++){
+            for (int j=0; j<maze.cols; j++){
+                if (maze.isPath(new Position(i, j)) && !(maze.getStartPosition().equals(new Position(i,j)))){
+                    i=maze.rows;
+                    j=maze.cols;
+                    AllWalls = false;
+                    break;
+                }
+            }
+        }
         Position goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
-        while (goal.equals(start) || maze.isWall(goal)){
-            goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
+        if (AllWalls){
+            return finishMaze(maze, goal);
+        }
+        else{
+            while (goal.equals(start) || maze.isWall(goal))
+                goal = new Position(rand.nextInt(rows), rand.nextInt(cols));
         }
         maze.setGoal(goal);
-
         return maze;
     }
 
@@ -67,6 +80,31 @@ public class MyMazeGenerator extends AMazeGenerator {
             walls.push(nearPosition);
             walls.push(farPosition);
         }
+    }
+
+    protected Maze finishMaze(Maze maze, Position goal){
+        Position start = maze.getStartPosition();
+        Random rand = new Random();
+        while (goal.equals(start))
+            goal = new Position(rand.nextInt(maze.rows), rand.nextInt(maze.cols));
+        if (start.getRowIndex() > goal.getRowIndex()){
+            for (int i=start.getRowIndex(); i>=goal.getRowIndex(); i--)
+                maze.setPath(new Position(i, start.getColumnIndex()));
+        }
+        else{
+            for (int i=start.getRowIndex(); i<=goal.getRowIndex(); i++)
+                maze.setPath(new Position(i, start.getColumnIndex()));
+        }
+        if (start.getColumnIndex() > goal.getColumnIndex()){
+            for (int i=start.getColumnIndex(); i>=goal.getColumnIndex(); i--)
+                maze.setPath(new Position(goal.getRowIndex(), i));
+        }
+        else{
+            for (int i=start.getColumnIndex(); i<=goal.getColumnIndex(); i++)
+                maze.setPath(new Position(goal.getRowIndex(), i));
+        }
+        maze.setGoal(goal);
+        return maze;
     }
 }
 
