@@ -3,8 +3,7 @@ package algorithms.search;
 import java.util.*;
 
 public class BreadthFirstSearch extends ASearchingAlgorithm {
-    private Solution solution;
-    private Hashtable<String, AState> grayStates;
+
     private Queue<AState> states;
 
     public BreadthFirstSearch() {
@@ -38,15 +37,5 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         return solution;
     }
 
-    private boolean isWhite(AState state) {
-        return !grayStates.containsKey(state.toString());
-    }
 
-    private boolean isGray(AState state) {
-        return grayStates.containsKey(state.toString());
-    }
-
-    private void paintGray(AState state) {
-        grayStates.put(state.toString(), state);
-    }
 }

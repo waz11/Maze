@@ -3,8 +3,6 @@ package algorithms.search;
 import java.util.*;
 
 public class BestFirstSearch extends BreadthFirstSearch {
-    private Solution solution;
-    private Hashtable<String, AState> grayStates;
     private PriorityQueue<AState> states;
 
     public BestFirstSearch() {
@@ -37,17 +35,4 @@ public class BestFirstSearch extends BreadthFirstSearch {
         }
         return solution;
     }
-
-    private boolean isWhite(AState state) {
-        return !grayStates.containsKey(state.toString());
-    }
-
-    private boolean isGray(AState state) {
-        return grayStates.containsKey(state.toString());
-    }
-
-    private void paintGray(AState state) {
-        grayStates.put(state.toString(), state);
-    }
-
 }

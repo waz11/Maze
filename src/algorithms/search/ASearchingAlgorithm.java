@@ -1,11 +1,15 @@
 package algorithms.search;
 
+import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     String Name;
     int numberOfNodesEvaluated;
+
+    protected Solution solution;
+    protected Hashtable<String, AState> grayStates;
 
     public ASearchingAlgorithm() {
         this.Name = this.getClass().toString();
@@ -29,5 +33,18 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
         while (!states.isEmpty())
             solution.addState(states.pop());
         return solution;
+    }
+
+
+    protected boolean isWhite(AState state) {
+        return !grayStates.containsKey(state.toString());
+    }
+
+    protected boolean isGray(AState state) {
+        return grayStates.containsKey(state.toString());
+    }
+
+    protected void paintGray(AState state) {
+        grayStates.put(state.toString(), state);
     }
 }

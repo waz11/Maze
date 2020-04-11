@@ -2,7 +2,6 @@ package algorithms.mazeGenerators;
 
 public class EmptyMazeGenerator extends AMazeGenerator {
 
-    //Still need to define a start and end positions
     @Override
     public Maze generate(int rows, int cols){
         Maze maze = new Maze(rows,cols);
