@@ -31,6 +31,9 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         return maze;
     }
 
+    /**
+     * this function ensure there's a solution of this maze
+     */
     private void paveSolution(){
         LinkedList<Integer> rowIndexes = goToIndex(start.getRowIndex(), goal.getRowIndex());
         for(int row : rowIndexes){
@@ -39,7 +42,10 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         }
         LinkedList<Integer> colIndexes = goToIndex(start.getColumnIndex(), goal.getColumnIndex());
         for(int col : colIndexes){
-            Position p = new Position(rowIndexes.getLast(), col);
+            int row = goal.getRowIndex();;
+            if(!rowIndexes.isEmpty())
+                row = rowIndexes.getLast();
+            Position p = new Position(row, col);
             solution.add(p);
         }
     }
@@ -58,6 +64,10 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         return indexes;
     }
 
+    /**
+     * this function get a position and sets this as wall or path by random
+     * @param position
+     */
     private void setRandomType(Position position){
         Random random = new Random();
         if(random.nextInt(3) < 2)

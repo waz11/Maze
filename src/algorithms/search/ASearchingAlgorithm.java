@@ -1,7 +1,6 @@
 package algorithms.search;
 
 import java.util.Hashtable;
-import java.util.LinkedList;
 import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
@@ -25,9 +24,9 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     protected Solution createSolution (AState state, AState start){
         Solution solution = new Solution();
         Stack<AState> states = new Stack<>();
-        while (state.getSource() != null){
+        while (state.getComeFrom() != null){
             states.add(state);
-            state = state.getSource();
+            state = state.getComeFrom();
         }
         states.add(start);
         while (!states.isEmpty())

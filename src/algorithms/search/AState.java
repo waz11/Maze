@@ -2,27 +2,27 @@ package algorithms.search;
 
 public abstract class AState implements Comparable<AState>{
     private int cost;
-    private AState source;
+    private AState comeFrom;
 
-    public AState(int cost, AState source) {
+    public AState(int cost, AState comeFrom) {
         this.cost = cost;
-        this.source = source;
+        this.comeFrom = comeFrom;
     }
 
     public int getCost() {
         return cost;
     }
 
-    public AState getSource() {
-        return source;
+    public AState getComeFrom() {
+        return comeFrom;
     }
 
     public void setCost(int cost) {
         this.cost = cost;
     }
 
-    public void setSource(AState source) {
-        this.source = source;
+    public void setComeFrom(AState comeFrom) {
+        this.comeFrom = comeFrom;
     }
 
     public int compareTo(AState o){
