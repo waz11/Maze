@@ -31,6 +31,6 @@ public class RunSearchOnMaze {
         /*for (int i = 0; i < solutionPath.size(); i++) {
             System.out.println(String.format("%s. %s",i,solutionPath.get(i)));
         }*/
-        System.out.println("Solution length: "+solutionPath.size() );
+        System.out.println("Solution length: " + solutionPath.size());
     }
 }
