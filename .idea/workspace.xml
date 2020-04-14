@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/JUnit/JunitTestingBestFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -48,13 +49,14 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1022495" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
       <recent name="algorithms.search" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -64,7 +66,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunSearchOnMaze">
+  <component name="RunManager" selected="JUnit.JunitTestingBestFirstSearch.name">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="ATP - Project - PartA" />
@@ -104,33 +106,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnitTestingBestFirstSearch.maze_Test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JunitTestingBestFirstSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ATP - Project - PartA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="algorithms.search" />
-      <option name="MAIN_CLASS_NAME" value="algorithms.search.JUnitTestingBestFirstSearch" />
-      <option name="METHOD_NAME" value="maze_Test1" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JunitTestingBestFirstSearch" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnitTestingBestFirstSearch.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JunitTestingBestFirstSearch.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ATP - Project - PartA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="algorithms.search" />
-      <option name="MAIN_CLASS_NAME" value="algorithms.search.JUnitTestingBestFirstSearch" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JunitTestingBestFirstSearch" />
+      <option name="METHOD_NAME" value="name" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunSearchOnMaze" />
+        <item itemvalue="JUnit.JunitTestingBestFirstSearch.name" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.JunitTestingBestFirstSearch" />
+        <item itemvalue="Application.RunSearchOnMaze" />
         <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="JUnit.JUnitTestingBestFirstSearch.test1" />
-        <item itemvalue="JUnit.JUnitTestingBestFirstSearch.maze_Test1" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +206,7 @@
       <workItem from="1586880151851" duration="118000" />
       <workItem from="1586881089853" duration="927000" />
       <workItem from="1586882077712" duration="1549000" />
-      <workItem from="1586885745344" duration="6268000" />
+      <workItem from="1586885745344" duration="7442000" />
     </task>
     <task id="LOCAL-00001" summary="ron">
       <created>1585666920533</created>
@@ -524,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586891970348</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ron">
+      <created>1586892326202</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1586892326202</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,10 +570,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586428382759" />
-    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586891969603">
+    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586892325266">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586891969603" />
+    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586892325266" />
     <state x="687" y="94" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585842821168" />
     <state x="443" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1585630638613">
       <screen x="0" y="0" width="1366" height="728" />
@@ -591,25 +587,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586782888852" />
-    <state width="1323" height="351" key="GridCell.Tab.0.bottom" timestamp="1586892014610">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1586893194590">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="351" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586892014610" />
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586893194590" />
     <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="351" key="GridCell.Tab.0.center" timestamp="1586892014610">
+    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1586893194589">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="351" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586892014610" />
+    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586893194589" />
     <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="351" key="GridCell.Tab.0.left" timestamp="1586892014610">
+    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1586893194589">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="351" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586892014610" />
+    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586893194589" />
     <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="351" key="GridCell.Tab.0.right" timestamp="1586892014610">
+    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1586893194589">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="351" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586892014610" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586893194589" />
     <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1586610901879">
       <screen x="0" y="0" width="1366" height="728" />
@@ -631,14 +627,14 @@
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586610901879" />
     <state width="1877" height="272" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541061" />
-    <state x="163" y="0" width="1118" height="728" key="SettingsEditor" timestamp="1586880251137">
+    <state x="163" y="0" width="1118" height="728" key="SettingsEditor" timestamp="1586892482369">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" width="1118" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586880251137" />
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586888811767">
+    <state x="163" y="0" width="1118" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586892482369" />
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586892336539">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586888811767" />
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586892336539" />
     <state x="769" y="147" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585841403398" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586463404496">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -653,10 +649,10 @@
     </state>
     <state x="547" y="305" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586890063479" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586424328469" />
-    <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586606124285">
+    <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586892560094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1586606124285" />
+    <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1586892560094" />
     <state x="430" y="167" key="git4idea.merge.GitPullDialog" timestamp="1585909923185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
