@@ -44,7 +44,6 @@ public class SearchableMaze implements ISearchable {
                     Position position = new Position(sourceRow + row, sourceCol + col);
                     if ((maze.isLegalPosition(position)) && (maze.isPath(position))) {
                         int cost = ms.getCost();
-                        System.out.println(ms.toString() + " " + cost);
                         // diagonal = two side move
                         if ((row != 0) && (col != 0)) {
                             if(diagonalPathExist(position, row, col)){
