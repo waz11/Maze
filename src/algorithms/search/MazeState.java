@@ -12,12 +12,10 @@ public class MazeState extends AState {
         this.state = state;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null) return false;
+        if (!(o instanceof MazeState))
+            return false;
         MazeState mState = (MazeState) o;
         return this.state.equals(((MazeState) o).state);
     }

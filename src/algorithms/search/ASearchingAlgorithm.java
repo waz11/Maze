@@ -6,7 +6,6 @@ import java.util.Stack;
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
     String Name;
     int numberOfNodesEvaluated;
-
     protected Solution solution;
     protected Hashtable<String, AState> grayStates;
 
@@ -33,6 +32,10 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
         return solution;
     }
 
+    /**
+     * @param state - state
+     * @return True-if this state is visited, false-else.
+     */
     protected boolean isWhite(AState state) {
         return !grayStates.containsKey(state.toString());
     }

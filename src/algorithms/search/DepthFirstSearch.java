@@ -30,12 +30,13 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                     boolean newStateFound = false;
                     for (AState st : possible) {
                         if (isWhite(st)) {
+                            st.setComeFrom(state);
                             states.push(st);
-                            newStateFound=true;
+                            newStateFound = true;
                             break;
                         }
                     }
-                    if(newStateFound==false)
+                    if(!newStateFound)
                         states.pop();
                 }
             }

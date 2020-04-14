@@ -17,9 +17,6 @@ public abstract class AState implements Comparable<AState>{
         return comeFrom;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
 
     public void setComeFrom(AState comeFrom) {
         this.comeFrom = comeFrom;

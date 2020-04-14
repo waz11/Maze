@@ -15,15 +15,13 @@ public class SearchableMaze implements ISearchable {
     @Override
     public AState getStartState() {
         Position start = maze.getStartPosition();
-        MazeState startState = new MazeState(start, null, 0);
-        return startState;
+        return new MazeState(start, null, 0);
     }
 
     @Override
     public AState getGoalState() {
         Position goal = maze.getGoalPosition();
-        MazeState goalState = new MazeState(goal, null, 0);
-        return goalState;
+        return new MazeState(goal, null, 0);
     }
 
     /**
@@ -58,7 +56,6 @@ public class SearchableMaze implements ISearchable {
         return successors;
     }
 
-
     private boolean diagonalPathExist(Position position, int row, int col) {
         int sourceRow = position.getRowIndex();
         int sourceCol = position.getColumnIndex();
@@ -66,7 +63,6 @@ public class SearchableMaze implements ISearchable {
         Position position2 = new Position(sourceRow, sourceCol+col);
         boolean path1 = maze.isLegalPosition(position1) && maze.isPath(position1);
         boolean path2 = maze.isLegalPosition(position2) && maze.isPath(position2);
-        boolean ans = path1 || path2;
-        return ans;
+        return path1 || path2;
     }
 }

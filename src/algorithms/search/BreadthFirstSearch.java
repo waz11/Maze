@@ -3,7 +3,7 @@ package algorithms.search;
 import java.util.*;
 
 public class BreadthFirstSearch extends ASearchingAlgorithm {
-    private Queue<AState> states;
+    protected Queue<AState> states;
 
     public BreadthFirstSearch() {
         this.solution = new Solution();
@@ -20,7 +20,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
 
             while (!states.isEmpty()) {
                 AState state = states.poll();
-                System.out.println(state.toString() + " "+ state.getCost());
                 if (state.equals(goal)) {
                     solution = createSolution(state);
                     break;
@@ -30,7 +29,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                     LinkedList<AState> possible = s.getAllPossibleStates(state);
                     for (AState st : possible) {
                         if (isWhite(st)) {
-                            //st.setComeFrom(state);
                             paintGray(st);
                             states.add(st);
                         }
