@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="ron">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/AMazeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/AMazeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/EmptyMazeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/EmptyMazeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/Maze.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/MyMazeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/MyMazeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/SimpleMazeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP - Project - PartA/algorithms/mazeGenerators/SimpleMazeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/Solution.java" afterDir="false" />
-    </list>
+    <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,12 +203,7 @@
       <workItem from="1586885745344" duration="9879000" />
       <workItem from="1586896022484" duration="145000" />
       <workItem from="1586896251881" duration="95000" />
-    </task>
-    <task id="LOCAL‎00002" summary="lielle">
-      <created>1585684543472</created>
-      <option name="number" value="LOCAL‎00002" />
-      <option name="presentableId" value="LOCAL‎00002" />
-      <updated>1585684543472</updated>
+      <workItem from="1586896899169" duration="233000" />
     </task>
     <task id="LOCAL‎00003" summary="lielle">
       <created>1585774808538</created>
@@ -555,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586893704299</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="ron">
+      <created>1586897079850</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1586897079850</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,10 +596,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586428382759" />
-    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586896307787">
+    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586897078736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586896307787" />
+    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586897078736" />
     <state x="687" y="94" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585842821168" />
     <state x="443" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1585630638613">
       <screen x="0" y="0" width="1366" height="728" />
@@ -622,25 +613,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586782888852" />
-    <state width="1323" height="304" key="GridCell.Tab.0.bottom" timestamp="1586896168057">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1586897133610">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="304" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586896168057" />
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586897133610" />
     <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="304" key="GridCell.Tab.0.center" timestamp="1586896168057">
+    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1586897133610">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="304" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586896168057" />
+    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586897133610" />
     <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="304" key="GridCell.Tab.0.left" timestamp="1586896168057">
+    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1586897133610">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="304" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586896168057" />
+    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586897133610" />
     <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="304" key="GridCell.Tab.0.right" timestamp="1586896168057">
+    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1586897133610">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="304" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586896168057" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586897133610" />
     <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1586610901879">
       <screen x="0" y="0" width="1366" height="728" />
@@ -666,10 +657,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" width="1118" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586892482369" />
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586896326388">
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586897097699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586896326388" />
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586897097699" />
     <state x="769" y="147" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585841403398" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586463404496">
       <screen x="0" y="0" width="1920" height="1040" />
