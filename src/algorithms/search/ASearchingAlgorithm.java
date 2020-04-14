@@ -21,26 +21,20 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
         return numberOfNodesEvaluated;
     }
 
-    protected Solution createSolution (AState state, AState start){
+    protected Solution createSolution (AState state){
         Solution solution = new Solution();
         Stack<AState> states = new Stack<>();
-        while (state.getComeFrom() != null){
+        while (state != null){
             states.add(state);
             state = state.getComeFrom();
         }
-        states.add(start);
         while (!states.isEmpty())
             solution.addState(states.pop());
         return solution;
     }
 
-
     protected boolean isWhite(AState state) {
         return !grayStates.containsKey(state.toString());
-    }
-
-    protected boolean isGray(AState state) {
-        return grayStates.containsKey(state.toString());
     }
 
     protected void paintGray(AState state) {

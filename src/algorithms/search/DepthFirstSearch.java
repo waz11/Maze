@@ -21,7 +21,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                 AState state = states.peek();
                     paintGray(state);
                 if (state.equals(goal)) {
-                    solution = createSolution(state, start);
+                    solution = createSolution(state);
                     break;
                 }
                 else {

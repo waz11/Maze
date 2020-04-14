@@ -22,7 +22,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                 AState state = states.poll();
                 System.out.println(state.toString() + " "+ state.getCost());
                 if (state.equals(goal)) {
-                    solution = createSolution(state, start);
+                    solution = createSolution(state);
                     break;
                 }
                 else {

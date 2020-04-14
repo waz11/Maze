@@ -7,10 +7,12 @@ import java.util.Objects;
 public class MazeState extends AState {
     Position state;
 
-    public MazeState(int cost, AState source, Position state) {
-        super(cost, source);
+    public MazeState(Position state, AState p_state, int cost) {
+        super(cost, p_state);
         this.state = state;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

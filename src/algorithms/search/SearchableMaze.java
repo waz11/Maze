@@ -15,14 +15,14 @@ public class SearchableMaze implements ISearchable {
     @Override
     public AState getStartState() {
         Position start = maze.getStartPosition();
-        MazeState startState = new MazeState(0, null, start);
+        MazeState startState = new MazeState(start, null, 0);
         return startState;
     }
 
     @Override
     public AState getGoalState() {
         Position goal = maze.getGoalPosition();
-        MazeState goalState = new MazeState(0, null, goal);
+        MazeState goalState = new MazeState(goal, null, 0);
         return goalState;
     }
 
@@ -34,7 +34,6 @@ public class SearchableMaze implements ISearchable {
     public LinkedList<AState> getAllPossibleStates(AState state) {
         LinkedList<AState> successors = new LinkedList<>();
         MazeState ms = (MazeState) state;
-
         int sourceRow = ms.state.getRowIndex();
         int sourceCol = ms.state.getColumnIndex();
 
@@ -44,20 +43,14 @@ public class SearchableMaze implements ISearchable {
                     Position position = new Position(sourceRow + row, sourceCol + col);
                     if ((maze.isLegalPosition(position)) && (maze.isPath(position))) {
                         int cost = ms.getCost();
-                        // diagonal = two side move
-                        if ((row != 0) && (col != 0)) {
-                            if(diagonalPathExist(position, row, col)){
+                        if ((row != 0) && (col != 0)) { // diagonal = two side move
+                            if(diagonalPathExist(position, row, col))
                                 cost += 15;
-                                MazeState successor = new MazeState(cost, state, position);
-                                successors.add(successor);
-                            }
                         }
-                        // one side move
-                        else {
+                        else // one side move
                             cost += 10;
-                            MazeState successor = new MazeState(cost, state, position);
-                            successors.add(successor);
-                        }
+                        MazeState successor = new MazeState(position, state, cost);
+                        successors.add(successor);
                     }
                 }
             }

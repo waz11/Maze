@@ -34,7 +34,7 @@ public class Main {
         SearchableMaze searchableMaze = new SearchableMaze(maze);
         //solveProblem(searchableMaze, new DepthFirstSearch());
         solveProblem(searchableMaze, new BreadthFirstSearch());
-        //solveProblem(searchableMaze, new BestFirstSearch());
+        solveProblem(searchableMaze, new BestFirstSearch());
     }
 
     private static void solveProblem(ISearchable domain, ISearchingAlgorithm searcher) {

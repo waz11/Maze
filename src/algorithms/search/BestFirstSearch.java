@@ -21,7 +21,7 @@ public class BestFirstSearch extends BreadthFirstSearch {
             while (!states.isEmpty()) {
                 AState state = states.poll();
                 if (state.equals(goal)) {
-                    solution = createSolution(state, start);
+                    solution = createSolution(state);
                     break;
                 } else {
                     this.numberOfNodesEvaluated++;
