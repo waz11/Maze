@@ -8,7 +8,11 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Maze maze = new Maze(3, 4);
+        ISearchingAlgorithm searcher = new BestFirstSearch();
+        Solution solution = searcher.solve(null);
+        System.out.println(solution.getSolutionPath());
+
+        /*Maze maze = new Maze(3, 4);
         Position start = new Position(2,3);
         Position goal = new Position(0,0);
         maze.setStart(start);
@@ -19,7 +23,7 @@ public class Main {
         SearchableMaze searchableMaze = new SearchableMaze(maze);
         solveProblem(searchableMaze, new DepthFirstSearch());
         solveProblem(searchableMaze, new BreadthFirstSearch());
-        solveProblem(searchableMaze, new BestFirstSearch());
+        solveProblem(searchableMaze, new BestFirstSearch());*/
     }
 
     private static void solveProblem(ISearchable domain, ISearchingAlgorithm searcher) {
