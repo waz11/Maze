@@ -32,16 +32,16 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                     this.numberOfNodesEvaluated++;
                     LinkedList<AState> possible = s.getAllPossibleStates(state);
                     Collections.shuffle(possible);
-                    boolean b = false;
+                    boolean newStateFound = false;
                     for (AState st : possible) {
                         if (isWhite(st)) {
                             paintGray(st);
                             states.add(st);
-                            b=true;
+                            newStateFound=true;
                             break;
                         }
                     }
-                    if(b==false)
+                    if(newStateFound==false)
                         states.pop();
                 }
             }
