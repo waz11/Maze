@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.util.Collections;
 import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Stack;
@@ -22,21 +23,26 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
             states.push(start);
 
             while (!states.isEmpty()) {
-                AState state = states.pop();
+                AState state = states.peek();
                 if (state.equals(goal)) {
                     solution = createSolution(state, start);
                     break;
                 }
                 else {
-                    if (isWhite(state)) {
-                        paintGray(state);
-                        this.numberOfNodesEvaluated++;
-                    }
+                    this.numberOfNodesEvaluated++;
                     LinkedList<AState> possible = s.getAllPossibleStates(state);
+                    Collections.shuffle(possible);
+                    boolean b = false;
                     for (AState st : possible) {
-                        if (isWhite(st))
+                        if (isWhite(st)) {
+                            paintGray(st);
                             states.add(st);
+                            b=true;
+                            break;
+                        }
                     }
+                    if(b==false)
+                        states.pop();
                 }
             }
         }
