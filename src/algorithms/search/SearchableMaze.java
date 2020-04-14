@@ -44,17 +44,19 @@ public class SearchableMaze implements ISearchable {
                     Position position = new Position(sourceRow + row, sourceCol + col);
                     if ((maze.isLegalPosition(position)) && (maze.isPath(position))) {
                         int cost = ms.getCost();
+                        System.out.println(ms.toString() + " " + cost);
                         // diagonal = two side move
                         if ((row != 0) && (col != 0)) {
                             if(diagonalPathExist(position, row, col)){
-                                cost = cost + 15;
-                                MazeState successor = new MazeState(ms.getCost() + cost, state, position);
+                                cost += 15;
+                                MazeState successor = new MazeState(cost, state, position);
                                 successors.add(successor);
                             }
                         }
                         // one side move
                         else {
-                            MazeState successor = new MazeState(ms.getCost() + cost, state, position);
+                            cost += 10;
+                            MazeState successor = new MazeState(cost, state, position);
                             successors.add(successor);
                         }
                     }
