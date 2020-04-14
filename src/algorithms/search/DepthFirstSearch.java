@@ -18,12 +18,15 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
         if(s != null) {
             AState start = s.getStartState();
             AState goal = s.getGoalState();
+            paintGray(start);
             states.push(start);
 
             while (!states.isEmpty()) {
                 AState state = states.pop();
-                if (state.equals(goal))
+                if (state.equals(goal)) {
                     solution = createSolution(state, start);
+                    break;
+                }
                 else {
                     if (isWhite(state)) {
                         paintGray(state);

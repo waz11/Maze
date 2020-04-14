@@ -15,12 +15,14 @@ public class BestFirstSearch extends BreadthFirstSearch {
         if (s != null) {
             AState start = s.getStartState();
             AState goal = s.getGoalState();
+            paintGray(start);
             states.add(start);
 
             while (!states.isEmpty()) {
                 AState state = states.poll();
                 if (state.equals(goal)) {
                     solution = createSolution(state, start);
+                    break;
                 } else {
                     this.numberOfNodesEvaluated++;
                     LinkedList<AState> possible = s.getAllPossibleStates(state);
