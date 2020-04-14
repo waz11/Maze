@@ -15,13 +15,17 @@ public class Maze {
 
     /* START AND GOAL POSITIONS*/
     public void setStart(Position start) {
-        maze[start.getRowIndex()][start.getColumnIndex()] = 0;
-        this.start = start;
+        if (isLegalPosition(start)) {
+            maze[start.getRowIndex()][start.getColumnIndex()] = 0;
+            this.start = start;
+        }
     }
 
     public void setGoal(Position goal) {
-        maze[start.getRowIndex()][start.getColumnIndex()] = 0;
-        this.goal = goal;
+        if (isLegalPosition(start)) {
+            maze[start.getRowIndex()][start.getColumnIndex()] = 0;
+            this.goal = goal;
+        }
     }
 
     public Position getStartPosition() {
@@ -32,61 +36,66 @@ public class Maze {
         return goal;
     }
 
-    protected boolean isStart(int i, int j) {
+    public boolean isStart(int i, int j) {
         return (i == this.start.getRowIndex() && j == this.start.getColumnIndex());
     }
 
-    protected boolean isGoal(int i, int j) {
+    public boolean isGoal(int i, int j) {
         return (i == this.goal.getRowIndex() && j == this.goal.getColumnIndex());
     }
 
-
     /* PATH AND WALL POSITIONS*/
-    public boolean setPath(Position position) {
-        if (!(isLegalPosition(position)))
-            return false;
-        maze[position.getRowIndex()][position.getColumnIndex()] = 0;
-        return true;
-    }
-    public boolean setPath(int i, int j) {
-        maze[i][j] = 0;
-        return true;
+
+    /**
+     * this function set value '0' in an appropriate cell of a maze
+     *
+     * @param position -
+     */
+    public void setPath(Position position) {
+        if (isLegalPosition(position))
+            maze[position.getRowIndex()][position.getColumnIndex()] = 0;
     }
 
-    public boolean setWall(Position position) {
-        if (!(isLegalPosition(position)))
-            return false;
-        maze[position.getRowIndex()][position.getColumnIndex()] = 1;
-        return true;
+    public void setPath(int row, int col) {
+        Position position = new Position(row, col);
+        if (isLegalPosition(position))
+            maze[row][col] = 0;
     }
 
-    public boolean setWall(int i, int j) {
-        maze[i][j] = 1;
-        return true;
+
+    protected void setWall(Position position) {
+        if (isLegalPosition(position))
+            maze[position.getRowIndex()][position.getColumnIndex()] = 1;
+    }
+
+    public void setWall(int i, int j) {
+        Position position = new Position(i, j);
+        if (isLegalPosition(position))
+            maze[i][j] = 1;
     }
 
     public boolean isWall(Position position) {
-        if (!isLegalPosition(position))
-            return false;
-        if(this.maze[position.getRowIndex()][position.getColumnIndex()] == 1)
-            return true;
+        if (isLegalPosition(position))
+            return this.maze[position.getRowIndex()][position.getColumnIndex()] == 1;
         return false;
     }
 
     public boolean isPath(Position position) {
-        if (!isLegalPosition(position))
-            return false;
-        if(this.maze[position.getRowIndex()][position.getColumnIndex()] == 0)
-            return true;
+        if (isLegalPosition(position))
+            return this.maze[position.getRowIndex()][position.getColumnIndex()] == 0;
         return false;
     }
 
     public boolean isLegalPosition(Position position) {
-        if (position.getRowIndex() < 0 || position.getRowIndex() >= this.rows || position.getColumnIndex() < 0 || position.getColumnIndex() >= this.cols)
-            return false;
-        return true;
+        boolean isLegalRow = position.getRowIndex() >= 0 && position.getRowIndex() < this.rows;
+        boolean isLegalCol = position.getColumnIndex() >= 0 && position.getColumnIndex() < this.cols;
+        return isLegalRow && isLegalCol;
     }
 
+    /**
+     * this function prints the maze with his special position- when:
+     * 'S' marks a start position and 'E' marks a goal position
+     */
     public void print() {
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {

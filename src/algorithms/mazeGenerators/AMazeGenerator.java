@@ -13,8 +13,8 @@ public abstract class AMazeGenerator implements IMazeGenerator {
 
     /**
      * this function get the maze size
-     * @param rows
-     * @param cols
+     * @param rows - amount of rows on a maze
+     * @param cols - amount of columns on a maze
      * @return 2 special points: start and goal
      */
     protected Position[] getSpecialPositions(int rows, int cols){
@@ -22,9 +22,8 @@ public abstract class AMazeGenerator implements IMazeGenerator {
         Random rand = new Random();
         Position start = new Position(rand.nextInt(rows),rand.nextInt(cols));
         Position goal = new Position(rand.nextInt(rows),rand.nextInt(cols));
-        while(start.equals(goal)){
+        while(start.equals(goal))
             goal = new Position(rand.nextInt(rows),rand.nextInt(cols));
-        }
         res[0] = start;
         res[1] = goal;
         return res;

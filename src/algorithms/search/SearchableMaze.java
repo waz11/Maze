@@ -26,7 +26,7 @@ public class SearchableMaze implements ISearchable {
 
     /**
      * @param state - a source position
-     * @return - list of all the successors positions from this source state (= legal and path positions)
+     * @return - list of all the successors (legal and path positions) positions from this source state
      */
     @Override
     public LinkedList<AState> getAllPossibleStates(AState state) {
@@ -56,6 +56,13 @@ public class SearchableMaze implements ISearchable {
         return successors;
     }
 
+    /**
+     * this function check if that diagonal path is legal at this maze
+     * @param position - a specific cell in a maze
+     * @param row - row number
+     * @param col - column number
+     * @return true if is a legal diagonal move
+     */
     private boolean isDiagonalPathExist(Position position, int row, int col) {
         int sourceRow = position.getRowIndex();
         int sourceCol = position.getColumnIndex();
