@@ -33,4 +33,21 @@ class JunitTestingBestFirstSearch {
         }
     }
 
+    @Test
+    void test3() {
+        Maze maze = new Maze(3, 4);
+        Position start = new Position(2,3);
+        Position goal = new Position(0,0);
+        maze.setStart(start);
+        maze.setGoal(goal);
+        maze.setWall(1,2);
+        maze.setWall(1,3);
+        maze.setWall(2,2);
+
+        SearchableMaze searchableMaze = new SearchableMaze(maze);
+        ISearchingAlgorithm searcher = new BestFirstSearch();
+        Solution solution = searcher.solve(searchableMaze);
+        ArrayList<AState> solutionPath = solution.getSolutionPath();
+        assertEquals("[]", solutionPath.toString());
+    }
 }
