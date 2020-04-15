@@ -5,7 +5,7 @@ import algorithms.mazeGenerators.Position;
 import java.util.LinkedList;
 
 public class SearchableMaze implements ISearchable {
-    Maze maze;
+    private Maze maze;
 
     public SearchableMaze(Maze maze) {
         this.maze = maze;
@@ -31,8 +31,8 @@ public class SearchableMaze implements ISearchable {
     public LinkedList<AState> getAllPossibleStates(AState state) {
         LinkedList<AState> successors = new LinkedList<>();
         MazeState ms = (MazeState) state;
-        int sourceRow = ms.state.getRowIndex();
-        int sourceCol = ms.state.getColumnIndex();
+        int sourceRow = ms.getState().getRowIndex();
+        int sourceCol = ms.getState().getColumnIndex();
 
         for (int row = -1; row <= 1; row++) {
             for (int col = -1; col <= 1; col++) {

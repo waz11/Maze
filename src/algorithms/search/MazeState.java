@@ -3,7 +3,11 @@ package algorithms.search;
 import algorithms.mazeGenerators.Position;
 
 public class MazeState extends AState {
-    Position state;
+    private Position state;
+
+    public Position getState() {
+        return state;
+    }
 
     public MazeState(Position state, AState p_state, int cost) {
         super(p_state, cost);
