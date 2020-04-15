@@ -13,6 +13,14 @@ public class Maze {
         this.cols = cols;
     }
 
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
     /* START AND GOAL POSITIONS*/
     public void setStart(Position start) {
         if (isLegalPosition(start)) {

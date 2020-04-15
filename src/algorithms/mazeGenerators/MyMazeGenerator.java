@@ -8,8 +8,8 @@ public class MyMazeGenerator extends AMazeGenerator {
         Maze maze = new Maze(rows, cols);
         Random rand = new Random();
         Stack<Position> walls = new Stack<>();
-        for (int row = 0; row < maze.rows; row++) {
-            for (int col = 0; col < maze.cols; col++)
+        for (int row = 0; row < maze.getRows(); row++) {
+            for (int col = 0; col < maze.getCols(); col++)
                 maze.setWall(row, col);
         }
         Position start = new Position(rand.nextInt(rows), rand.nextInt(cols));
@@ -25,11 +25,11 @@ public class MyMazeGenerator extends AMazeGenerator {
             }
         }
         boolean AllWalls = true;
-        for (int i=0; i<maze.rows; i++){
-            for (int j=0; j<maze.cols; j++){
+        for (int i=0; i<maze.getRows(); i++){
+            for (int j=0; j<maze.getCols(); j++){
                 if (maze.isPath(new Position(i, j)) && !(maze.getStartPosition().equals(new Position(i,j)))){
-                    i=maze.rows;
-                    j=maze.cols;
+                    i=maze.getRows();
+                    j=maze.getCols();
                     AllWalls = false;
                     break;
                 }
@@ -86,7 +86,7 @@ public class MyMazeGenerator extends AMazeGenerator {
         Position start = maze.getStartPosition();
         Random rand = new Random();
         while (goal.equals(start))
-            goal = new Position(rand.nextInt(maze.rows), rand.nextInt(maze.cols));
+            goal = new Position(rand.nextInt(maze.getRows()), rand.nextInt(maze.getCols()));
         if (start.getRowIndex() > goal.getRowIndex()){
             for (int i=start.getRowIndex(); i>=goal.getRowIndex(); i--)
                 maze.setPath(new Position(i, start.getColumnIndex()));
