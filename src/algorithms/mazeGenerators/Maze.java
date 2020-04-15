@@ -4,8 +4,8 @@ public class Maze {
     private int[][] maze;
     private Position start;
     private Position goal;
-    int rows;
-    int cols;
+    private int rows;
+    private int cols;
 
     public Maze(int rows, int cols) {
         this.maze = new int[rows][cols];
