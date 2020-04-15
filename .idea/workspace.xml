@@ -6,8 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="ron">
+    <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,8 +69,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.RunSearchOnMaze">
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Main2" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="ATP - Project - PartA" />
       <extension name="coverage">
         <pattern>
@@ -106,11 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JunitTestingBestFirstSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JunitTestingBestFirstSearch.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ATP - Project - PartA" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JunitTestingBestFirstSearch" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,10 +131,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunSearchOnMaze" />
-        <item itemvalue="JUnit.SearchableMazeTest.test1" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="Application.Main2" />
-        <item itemvalue="JUnit.JunitTestingBestFirstSearch" />
+        <item itemvalue="JUnit.JunitTestingBestFirstSearch.test2" />
+        <item itemvalue="JUnit.SearchableMazeTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -214,14 +217,7 @@
       <workItem from="1586897595736" duration="16000" />
       <workItem from="1586897958636" duration="89000" />
       <workItem from="1586936851190" duration="3300000" />
-      <workItem from="1586948267180" duration="492000" />
-    </task>
-    <task id="LOCAL-00007" summary="ron">
-      <created>1585863766294</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1585863766294</updated>
+      <workItem from="1586948267180" duration="2958000" />
     </task>
     <task id="LOCAL-00008" summary="ron">
       <created>1585864451784</created>
@@ -559,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586948617253</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="ron">
+      <created>1586948840610</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1586948840610</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,10 +617,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586938906554" />
-    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586948631563">
+    <state x="429" y="244" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586949122820">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586948631563" />
+    <state x="429" y="244" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1586949122820" />
+    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586948839758">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586948839758" />
     <state x="687" y="94" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585842821168" />
     <state x="443" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1585630638613">
       <screen x="0" y="0" width="1366" height="728" />
@@ -631,25 +638,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586782888852" />
-    <state width="1323" height="374" key="GridCell.Tab.0.bottom" timestamp="1586948756920">
+    <state width="1323" height="367" key="GridCell.Tab.0.bottom" timestamp="1586951038980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="374" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586948756920" />
+    <state width="1323" height="367" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586951038980" />
     <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="374" key="GridCell.Tab.0.center" timestamp="1586948756920">
+    <state width="1323" height="367" key="GridCell.Tab.0.center" timestamp="1586951038980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="374" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586948756920" />
+    <state width="1323" height="367" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586951038980" />
     <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="374" key="GridCell.Tab.0.left" timestamp="1586948756920">
+    <state width="1323" height="367" key="GridCell.Tab.0.left" timestamp="1586951038980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="374" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586948756920" />
+    <state width="1323" height="367" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586951038980" />
     <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
-    <state width="1323" height="374" key="GridCell.Tab.0.right" timestamp="1586948756920">
+    <state width="1323" height="367" key="GridCell.Tab.0.right" timestamp="1586951038980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="374" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586948756920" />
+    <state width="1323" height="367" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586951038980" />
     <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586467541060" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1586610901879">
       <screen x="0" y="0" width="1366" height="728" />
@@ -675,10 +682,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" width="1118" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586892482369" />
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586948635766">
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586948850425">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586948635766" />
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586948850425" />
     <state x="769" y="147" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585841403398" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586463404496">
       <screen x="0" y="0" width="1920" height="1040" />

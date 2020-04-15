@@ -19,13 +19,15 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
             states.push(start);
             while (!states.isEmpty()) {
                 AState state = states.peek();
-                    paintGray(state);
                 if (state.equals(goal)) {
                     solution = createSolution(state);
                     break;
                 }
-                else {
+                if(isWhite(state)) {
                     this.numberOfNodesEvaluated++;
+                    paintGray(state);
+                }
+                else {
                     LinkedList<AState> possible = s.getAllPossibleStates(state);
                     boolean newStateFound = false;
                     for (AState st : possible) {
