@@ -4,7 +4,7 @@ public abstract class AState implements Comparable<AState>{
     private int cost;
     private AState comeFrom;
 
-    public AState(int cost, AState comeFrom) {
+    public AState(AState comeFrom, int cost) {
         this.cost = cost;
         this.comeFrom = comeFrom;
     }

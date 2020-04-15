@@ -8,7 +8,7 @@ public class MazeState extends AState {
     Position state;
 
     public MazeState(Position state, AState p_state, int cost) {
-        super(cost, p_state);
+        super(p_state, cost);
         this.state = state;
     }
 
