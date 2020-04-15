@@ -4,8 +4,8 @@ import java.util.Hashtable;
 import java.util.Stack;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
-    String Name;
-    int numberOfNodesEvaluated;
+    private String Name;
+    protected int numberOfNodesEvaluated;
     protected Solution solution;
     protected Hashtable<String, AState> grayStates;
 
