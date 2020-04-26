@@ -118,5 +118,9 @@ public class Maze {
         }
     }
 
+    public byte[] toByteArray() {
+        return null;
+    }
+
 
 }

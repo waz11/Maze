@@ -17,7 +17,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             AState goal = s.getGoalState();
             paintGray(start);
             states.add(start);
-
             while (!states.isEmpty()) {
                 AState state = states.poll();
                 if (state.equals(goal)) {
