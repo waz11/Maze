@@ -13,6 +13,10 @@ public class Maze {
         this.cols = cols;
     }
 
+    public Maze(byte[] byteArrayMaze){
+        //To do
+    }
+
     public int getRows() {
         return rows;
     }
