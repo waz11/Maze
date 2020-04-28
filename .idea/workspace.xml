@@ -7,16 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/IO/MyCompressorOutputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IO/MyDecompressorInputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JUnit/JunitTestingBestFirstSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JUnit/SearchableMazeTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,14 +227,8 @@
       <workItem from="1587024960751" duration="51000" />
       <workItem from="1587050724146" duration="542000" />
       <workItem from="1587834887183" duration="80000" />
-      <workItem from="1587891071281" duration="4536000" />
-    </task>
-    <task id="LOCAL-00015" summary="ron">
-      <created>1585912322427</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1585912322427</updated>
+      <workItem from="1587891071281" duration="4607000" />
+      <workItem from="1588069373429" duration="5573000" />
     </task>
     <task id="LOCAL-00016" summary="ron">
       <created>1585914042505</created>
@@ -580,7 +566,13 @@
       <option name="project" value="LOCAL" />
       <updated>1586966933347</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL‎00064" summary="Lielle - Part B">
+      <created>1587920067851</created>
+      <option name="number" value="LOCAL‎00064" />
+      <option name="presentableId" value="LOCAL‎00064" />
+      <updated>1587920067851</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +581,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lielle" />
     <MESSAGE value="ron" />
-    <option name="LAST_COMMIT_MESSAGE" value="ron" />
+    <MESSAGE value="Lielle - Part B" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lielle - Part B" />
   </component>
   <component name="WindowStateProjectService">
     <state x="274" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586937361038">
@@ -639,11 +632,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="244" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1586949122820" />
-    <state x="42" y="0" key="CommitChangelistDialog2" timestamp="1586967089105">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="687" y="94" key="CommitChangelistDialog2" timestamp="1588101284678">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586967089105" />
-    <state x="687" y="94" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585842821168" />
+    <state x="687" y="94" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588101284678" />
     <state x="443" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1585630638613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -702,24 +695,24 @@
     </state>
     <state x="163" y="0" width="1118" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586892482369" />
     <state x="229" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587893097348" />
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2" timestamp="1586966891839">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586966891839" />
-    <state x="769" y="147" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585841403398" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587834899910">
+    <state x="769" y="147" key="Vcs.Push.Dialog.v2" timestamp="1587920076685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587834899910" />
+    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586966891839" />
+    <state x="769" y="147" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587920076685" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588069391351">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588069391351" />
     <state x="331" y="265" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586606105621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="331" y="265" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1586606105621" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587891103808">
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588070819979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="547" y="305" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586890063479" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587891103808" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588070819979" />
     <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586937474867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

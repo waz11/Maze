@@ -118,8 +118,45 @@ public class Maze {
         }
     }
 
+    //Maze Rows, Maze Cols, Start Position (rows then cols), Goal Position (rows then cols)
+    //After that - maze positions represented as bytes.
+    // (Yeah I know it looks bad)
     public byte[] toByteArray() {
-        return null;
+        String readByte = "";
+        int counter = 12;
+
+        int totalMazeSize = this.cols*this.rows;
+        byte[] mazeAsBytes = new byte[13+(totalMazeSize/8)];
+        mazeAsBytes[0] = ((Integer) (rows/255)).byteValue();
+        mazeAsBytes[1] = ((Integer) (rows%255)).byteValue();
+        mazeAsBytes[2] = ((Integer) (cols/255)).byteValue();
+        mazeAsBytes[3] = ((Integer) (cols%255)).byteValue();
+        mazeAsBytes[4] = ((Integer) (start.getRowIndex()/255)).byteValue();
+        mazeAsBytes[5] = ((Integer) (start.getRowIndex()%255)).byteValue();
+        mazeAsBytes[6] = ((Integer) (start.getColumnIndex()/255)).byteValue();
+        mazeAsBytes[7] = ((Integer) (start.getColumnIndex()%255)).byteValue();
+        mazeAsBytes[8] = ((Integer) (goal.getRowIndex()/255)).byteValue();
+        mazeAsBytes[9] = ((Integer) (goal.getRowIndex()%255)).byteValue();
+        mazeAsBytes[10] = ((Integer) (goal.getColumnIndex()/255)).byteValue();
+        mazeAsBytes[11] = ((Integer) (goal.getColumnIndex()%255)).byteValue();
+
+        for (int i=0; i<rows; i++){
+            for (int j=0; j<cols; j++){
+                if (readByte.length() < 8){
+                    readByte = readByte + Integer.toString(maze[i][j]);
+                }
+                else if (readByte.length() == 8){
+                    mazeAsBytes[counter] = Byte.parseByte(readByte, 2);
+                    readByte = "";
+                    counter++;
+                }
+            }
+        }
+        while (readByte.length() < 8){
+            readByte = readByte + Integer.toString(0);
+        }
+        mazeAsBytes[counter] = Byte.parseByte(readByte, 2);
+        return mazeAsBytes;
     }
 
 
