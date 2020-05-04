@@ -1,5 +1,7 @@
 package algorithms.mazeGenerators;
 
+import sun.misc.resources.Messages_zh_CN;
+
 public class Maze {
     private int[][] maze;
     private Position start;
@@ -14,7 +16,17 @@ public class Maze {
     }
 
     public Maze(byte[] byteArrayMaze){
-        //To do
+        int index = 0;
+        this.rows = byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF));
+        this.cols = byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF));
+        this.start = new Position(byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)), byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)));
+        this.goal = new Position(byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)), byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)));
+        this.maze = new int[rows][cols];
+        for(int i=0;i<this.rows; i++){
+            for(int j=0;j<this.cols;j++){
+                this.maze[i][j] = byteArrayMaze[index++];
+            }
+        }
     }
 
     public int getRows() {
@@ -144,22 +156,13 @@ public class Maze {
         mazeAsBytes[10] = ((Integer) (goal.getColumnIndex()/255)).byteValue();
         mazeAsBytes[11] = ((Integer) (goal.getColumnIndex()%255)).byteValue();
 
-        for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
-                if (readByte.length() < 8){
-                    readByte = readByte + Integer.toString(maze[i][j]);
-                }
-                else if (readByte.length() == 8){
-                    mazeAsBytes[counter] = Byte.parseByte(readByte, 2);
-                    readByte = "";
-                    counter++;
-                }
+
+
+        for (int i=0; i<rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                mazeAsBytes[counter++] = ((Integer)(this.maze[i][j])).byteValue();
             }
         }
-        while (readByte.length() < 8){
-            readByte = readByte + Integer.toString(0);
-        }
-        mazeAsBytes[counter] = Byte.parseByte(readByte, 2);
         return mazeAsBytes;
     }
 
