@@ -142,7 +142,7 @@ public class Maze {
         int counter = 12;
 
         int totalMazeSize = this.cols*this.rows;
-        byte[] mazeAsBytes = new byte[13+(totalMazeSize/8)];
+        byte[] mazeAsBytes = new byte[12+totalMazeSize];
         mazeAsBytes[0] = ((Integer) (rows/255)).byteValue();
         mazeAsBytes[1] = ((Integer) (rows%255)).byteValue();
         mazeAsBytes[2] = ((Integer) (cols/255)).byteValue();
