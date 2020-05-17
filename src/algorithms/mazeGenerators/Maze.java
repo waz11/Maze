@@ -2,7 +2,11 @@ package algorithms.mazeGenerators;
 
 import sun.misc.resources.Messages_zh_CN;
 
-public class Maze {
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+public class Maze implements Serializable {
     private int[][] maze;
     private Position start;
     private Position goal;
@@ -166,5 +170,8 @@ public class Maze {
         return mazeAsBytes;
     }
 
-
+    public String arrayToString() {
+        int [][] mazeValues =maze;
+        return Arrays.stream(mazeValues).flatMapToInt(Arrays::stream).mapToObj(String::valueOf).collect(Collectors.joining(" "))+start.toString()+goal.toString();
+    }
 }

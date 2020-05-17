@@ -5,6 +5,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Server {
     private int port;
@@ -19,28 +22,32 @@ public class Server {
     }
 
 
-    public void start()
+    public void runServer()
     {
+        //Lielle: Need to change the code here so it'll use thread pool
+
         try {
+            ExecutorService executor = Executors.newFixedThreadPool(2); //Lielle: change that later
+            ThreadPoolExecutor pool = (ThreadPoolExecutor) executor;
             ServerSocket serverSocket = new ServerSocket(port);
-            serverSocket.setSoTimeout(1000);
+            serverSocket.setSoTimeout(waiting);
 
             while (!stop)
             {
                 try {
                     Socket clientSocket = serverSocket.accept();
-
                     InputStream inFromClient = clientSocket.getInputStream();
                     OutputStream outToClient = clientSocket.getOutputStream();
-
-                    this.serverStrategy.serverStrategy(inFromClient, outToClient);
-
+                    //Lielle: Not sure I did this part right-
+                    pool.execute(new Thread(() -> {
+                        this.serverStrategy.serverStrategy(inFromClient, outToClient);
+                    }));
                     inFromClient.close();
                     outToClient.close();
                     clientSocket.close();
                 }
                 catch (IOException e) {
-
+                    //Lielle: What should we write here?
                 }
             }
         } catch (IOException e) {
@@ -50,7 +57,6 @@ public class Server {
 
     public void stop()
     {
-        System.out.println("The server has stopped!");
         this.stop = true;
     }
 

@@ -8,27 +8,55 @@ import algorithms.search.Solution;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.Hashtable;
 
 public class ServerStrategySolveSearchProblem implements IServerStrategy {
     private ISearchingAlgorithm solving;
+    private Hashtable<String, String> mazesSolved;
+    private static int solutionCounter = 0; //static?
 
 
+    //Lielle: Probably doesn't work:
     @Override
     public void serverStrategy(InputStream inputStream, OutputStream outputStream) {
         Maze maze;
+        Solution solution;
         try {
             ObjectInputStream fromClient = new ObjectInputStream(inputStream);
             ObjectOutputStream toClient = new ObjectOutputStream(outputStream);
             maze = (Maze)fromClient.readObject();
+            String tempDirectoryPath = System.getProperty("java.io.tmpdir");
 
-            byte[] byteMaze = maze.toByteArray();
-            int mazeHash = Arrays.hashCode(byteMaze);
-            String mazeName = "" + mazeHash + ".maze";
-            Solution s = solving.solve((ISearchable) maze);
-            saveMazeSolution(mazeName, s);
+            String mazeName = maze.arrayToString();
+            if (!mazesSolved.containsKey(mazeName)){
+                String fileName = "" + solutionCounter + ".txt";
+                mazesSolved.put(mazeName, fileName);
+                solutionCounter++;
+                solution = solving.solve((ISearchable) maze);
+                //Now we save the solution (no idea what's going on here with this I/O)
+                File newFile = new File(tempDirectoryPath, fileName);
+                FileOutputStream outFile = new FileOutputStream(newFile);
+                toClient = new ObjectOutputStream(outFile);
 
-            toClient.writeObject(s);
-            toClient.flush();
+                toClient.writeObject(solution);
+                toClient.flush();
+            }
+            else{
+                String fileName = mazesSolved.get(mazeName);
+                //Now we get the solution from the file
+                File newFile = new File(tempDirectoryPath, fileName);
+                FileInputStream inputFile = new FileInputStream(newFile);
+                ObjectInputStream returnFile = new ObjectInputStream(inputFile);
+
+                solution = (Solution) returnFile.readObject();
+                returnFile.close();
+                toClient.writeObject(solution);
+                toClient.flush();
+
+            }
+
+            toClient.close();
+            fromClient.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -37,22 +65,4 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
 
     }
 
-    public boolean isExist(String mazeName){
-        String tempDirectoryPath = System.getProperty("java.io.tmpdir");
-        return true;
-    }
-
-    public void saveMazeSolution(String mazeName, Solution s){
-        if(!isExist((mazeName))){
-            try {
-                File myObj = new File(mazeName);
-                myObj.createNewFile();
-                ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(myObj));
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
 }
