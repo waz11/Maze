@@ -75,14 +75,17 @@ public class RunCommunicateWithServers {
                 public void clientStrategy(InputStream inFromServer, OutputStream outToServer) {
                     try {
                         ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
-                        ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
-                        toServer.flush();
-                        MyMazeGenerator mg = new MyMazeGenerator();
-                        Maze maze = mg.generate(50, 50);
-                        maze.print();
-                        toServer.writeObject(maze); //send maze to server
-                        toServer.flush();
-                        Solution mazeSolution = (Solution) fromServer.readObject(); //read generated maze (compressed with MyCompressor) from server
+                        Solution mazeSolution;
+                        try (ObjectInputStream fromServer = new ObjectInputStream(inFromServer)) {
+                            toServer.flush();
+                            MyMazeGenerator mg = new MyMazeGenerator();
+                            Maze maze = mg.generate(50, 50);
+                            maze.print();
+                            toServer.writeObject(maze); //send maze to server
+                            toServer.flush();
+                            //read generated maze (compressed with MyCompressor) from server
+                            mazeSolution = (Solution) fromServer.readObject();
+                        }
 
                         //Print Maze Solution retrieved from the server
                         System.out.println(String.format("Solution steps: %s", mazeSolution));
