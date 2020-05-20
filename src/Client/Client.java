@@ -9,18 +9,19 @@ public class Client {
     private int serverPort;
     private InetAddress serverIP;
 
-    public Client(IClientStrategy clientStrategy, int serverPort, InetAddress serverIP) {
+    public Client(InetAddress serverIP, int serverPort, IClientStrategy clientStrategy ) {
         this.clientStrategy = clientStrategy;
         this.serverPort = serverPort;
         this.serverIP = serverIP;
     }
 
-    public void start(){
+    public void communicateWithServer() {
         try{
-            Socket theServer = new Socket(serverIP, serverPort);
-            clientStrategy.clientStrategy(theServer.getInputStream(), theServer.getOutputStream());
-            theServer.close();
-        } catch (IOException e) {
+            Socket toServer = new Socket(this.serverIP, this.serverPort);
+            clientStrategy.clientStrategy(toServer.getInputStream(),toServer.getOutputStream());
+            toServer.close();
+        }
+        catch (Exception e){
             e.printStackTrace();
         }
     }

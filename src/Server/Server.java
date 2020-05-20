@@ -1,63 +1,73 @@
 package Server;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+/**
+ * Created by Aviadjo on 3/2/2017.
+ */
 public class Server {
     private int port;
+    private int listeningInterval;
     private IServerStrategy serverStrategy;
-    private int waiting;
     private volatile boolean stop;
+    private ExecutorService threadPoolExecutor;
 
-    public Server(int port,int waiting, IServerStrategy serverStrategy) {
+
+    public Server(int port, int listeningInterval, IServerStrategy serverStrategy) {
         this.port = port;
+        this.listeningInterval = listeningInterval;
         this.serverStrategy = serverStrategy;
-        this.waiting = waiting;
+        this.threadPoolExecutor =  Executors.newFixedThreadPool(5);
     }
 
+    public void start() {
+        new Thread(() -> {
+            runServer();
+        }).start();
+    }
 
-    public void runServer()
-    {
-        //Lielle: Need to change the code here so it'll use thread pool
-
+    private void runServer() {
         try {
-            ExecutorService executor = Executors.newFixedThreadPool(2); //Lielle: change that later
-            ThreadPoolExecutor pool = (ThreadPoolExecutor) executor;
-            ServerSocket serverSocket = new ServerSocket(port);
-            serverSocket.setSoTimeout(waiting);
 
-            while (!stop)
-            {
+            ServerSocket serverSocket = new ServerSocket(port);
+            serverSocket.setSoTimeout(listeningInterval);
+
+            while (!stop) {
                 try {
-                    Socket clientSocket = serverSocket.accept();
-                    InputStream inFromClient = clientSocket.getInputStream();
-                    OutputStream outToClient = clientSocket.getOutputStream();
-                    //Lielle: Not sure I did this part right-
-                    pool.execute(new Thread(() -> {
-                        this.serverStrategy.serverStrategy(inFromClient, outToClient);
-                    }));
-                    inFromClient.close();
-                    outToClient.close();
-                    clientSocket.close();
-                }
-                catch (IOException e) {
-                    //Lielle: What should we write here?
+                    Socket clientSocket = serverSocket.accept(); // blocking call
+                    serverStrategy.serverStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
+                    threadPoolExecutor.execute(() ->{
+                        clientHandle(clientSocket);
+                    });
+                    stop();
+                } catch (SocketTimeoutException e) {
+                    threadPoolExecutor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
+                    threadPoolExecutor.setCorePoolSize(2);
+                    threadPoolExecutor.setMaximumPoolSize(2);
                 }
             }
+            serverSocket.close();
         } catch (IOException e) {
-            e.printStackTrace();
+
         }
     }
 
-    public void stop()
-    {
-        this.stop = true;
+    private void handleClient(Socket clientSocket) {
+        try {
+            serverStrategy.serverStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
+            clientSocket.close();
+        } catch (IOException e) {
+
+        }
     }
 
+    public void stop() {
+        stop = true;
+    }
 }
