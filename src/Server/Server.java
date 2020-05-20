@@ -43,16 +43,16 @@ public class Server {
                     Socket clientSocket = serverSocket.accept(); // blocking call
                     serverStrategy.serverStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
                     threadPoolExecutor.execute(() ->{
-                        clientHandle(clientSocket);
+                        handleClient(clientSocket);
                     });
+
                     stop();
                 } catch (SocketTimeoutException e) {
-                    threadPoolExecutor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-                    threadPoolExecutor.setCorePoolSize(2);
-                    threadPoolExecutor.setMaximumPoolSize(2);
+
                 }
             }
             serverSocket.close();
+            threadPoolExecutor.shutdown();
         } catch (IOException e) {
 
         }
