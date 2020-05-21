@@ -1,19 +1,17 @@
 package Server;
 
 import algorithms.mazeGenerators.Maze;
-import algorithms.search.ASearchingAlgorithm;
-import algorithms.search.ISearchable;
-import algorithms.search.ISearchingAlgorithm;
-import algorithms.search.Solution;
+import algorithms.search.*;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.Hashtable;
 
 public class ServerStrategySolveSearchProblem implements IServerStrategy {
-    private ISearchingAlgorithm solving;
-    private Hashtable<String, String> mazesSolved;
+    private ISearchingAlgorithm solving = new BestFirstSearch();
+    private Hashtable<String, String> mazesSolved = new Hashtable<String, String>();
     private static int solutionCounter = 0; //static?
+
 
 
     //Lielle: Probably doesn't work:
@@ -32,12 +30,11 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
                 String fileName = "" + solutionCounter + ".txt";
                 mazesSolved.put(mazeName, fileName);
                 solutionCounter++;
-                solution = solving.solve((ISearchable) maze);
+                SearchableMaze searchMaze = new SearchableMaze(maze);
+                solution = solving.solve(searchMaze);
                 //Now we save the solution (no idea what's going on here with this I/O)
                 File newFile = new File(tempDirectoryPath, fileName);
                 FileOutputStream outFile = new FileOutputStream(newFile);
-                toClient = new ObjectOutputStream(outFile);
-
                 toClient.writeObject(solution);
                 toClient.flush();
             }

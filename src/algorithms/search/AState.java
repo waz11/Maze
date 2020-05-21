@@ -9,6 +9,11 @@ public abstract class AState implements Comparable<AState>{
         this.comeFrom = comeFrom;
     }
 
+    public AState(){
+        this.cost = 10;
+        this.comeFrom = null;
+    }
+
     public int getCost() { return cost; }
 
     public AState getComeFrom() {

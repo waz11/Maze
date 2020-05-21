@@ -8,9 +8,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-/**
- * Created by Aviadjo on 3/2/2017.
- */
 public class Server {
     private int port;
     private int listeningInterval;
@@ -23,7 +20,8 @@ public class Server {
         this.port = port;
         this.listeningInterval = listeningInterval;
         this.serverStrategy = serverStrategy;
-        this.threadPoolExecutor =  Executors.newFixedThreadPool(5);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        this.threadPoolExecutor = (ThreadPoolExecutor) executor;
     }
 
     public void start() {
@@ -41,14 +39,13 @@ public class Server {
             while (!stop) {
                 try {
                     Socket clientSocket = serverSocket.accept(); // blocking call
-                    serverStrategy.serverStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
-                    threadPoolExecutor.execute(() ->{
+                    Thread thread = new Thread(() -> {
                         handleClient(clientSocket);
                     });
+                    threadPoolExecutor.execute(thread);
 
-                    stop();
                 } catch (SocketTimeoutException e) {
-
+                    e.getStackTrace();
                 }
             }
             serverSocket.close();
@@ -63,7 +60,7 @@ public class Server {
             serverStrategy.serverStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
             clientSocket.close();
         } catch (IOException e) {
-
+            e.getStackTrace();
         }
     }
 
