@@ -21,10 +21,10 @@ public class Maze implements Serializable {
 
     public Maze(byte[] byteArrayMaze){
         int index = 0;
-        this.rows = byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF));
-        this.cols = byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF));
-        this.start = new Position(byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)), byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)));
-        this.goal = new Position(byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)), byteArrayMaze[index++] * 255 + (byteArrayMaze[index++] & (0xFF)));
+        this.rows = byteArrayMaze[index++] * 256 + (Byte.toUnsignedInt(byteArrayMaze[index++]));
+        this.cols = byteArrayMaze[index++] * 256 + (Byte.toUnsignedInt(byteArrayMaze[index++]));
+        this.start = new Position(byteArrayMaze[index++] * 256 + (Byte.toUnsignedInt(byteArrayMaze[index++])), byteArrayMaze[index++] * 256 + (Byte.toUnsignedInt(byteArrayMaze[index++])));
+        this.goal = new Position(byteArrayMaze[index++] * 256 + (Byte.toUnsignedInt(byteArrayMaze[index++])), byteArrayMaze[index++] * 256 + (Byte.toUnsignedInt(byteArrayMaze[index++])));
         this.maze = new int[rows][cols];
         for(int i=0;i<this.rows; i++){
             for(int j=0;j<this.cols;j++){
@@ -147,18 +147,18 @@ public class Maze implements Serializable {
 
         int totalMazeSize = this.cols*this.rows;
         byte[] mazeAsBytes = new byte[12+totalMazeSize];
-        mazeAsBytes[0] = ((Integer) (rows/255)).byteValue();
-        mazeAsBytes[1] = ((Integer) (rows%255)).byteValue();
-        mazeAsBytes[2] = ((Integer) (cols/255)).byteValue();
-        mazeAsBytes[3] = ((Integer) (cols%255)).byteValue();
-        mazeAsBytes[4] = ((Integer) (start.getRowIndex()/255)).byteValue();
-        mazeAsBytes[5] = ((Integer) (start.getRowIndex()%255)).byteValue();
-        mazeAsBytes[6] = ((Integer) (start.getColumnIndex()/255)).byteValue();
-        mazeAsBytes[7] = ((Integer) (start.getColumnIndex()%255)).byteValue();
-        mazeAsBytes[8] = ((Integer) (goal.getRowIndex()/255)).byteValue();
-        mazeAsBytes[9] = ((Integer) (goal.getRowIndex()%255)).byteValue();
-        mazeAsBytes[10] = ((Integer) (goal.getColumnIndex()/255)).byteValue();
-        mazeAsBytes[11] = ((Integer) (goal.getColumnIndex()%255)).byteValue();
+        mazeAsBytes[0] = ((Integer) (rows/256)).byteValue();
+        mazeAsBytes[1] = ((Integer) (rows%256)).byteValue();
+        mazeAsBytes[2] = ((Integer) (cols/256)).byteValue();
+        mazeAsBytes[3] = ((Integer) (cols%256)).byteValue();
+        mazeAsBytes[4] = ((Integer) (start.getRowIndex()/256)).byteValue();
+        mazeAsBytes[5] = ((Integer) (start.getRowIndex()%256)).byteValue();
+        mazeAsBytes[6] = ((Integer) (start.getColumnIndex()/256)).byteValue();
+        mazeAsBytes[7] = ((Integer) (start.getColumnIndex()%256)).byteValue();
+        mazeAsBytes[8] = ((Integer) (goal.getRowIndex()/256)).byteValue();
+        mazeAsBytes[9] = ((Integer) (goal.getRowIndex()%256)).byteValue();
+        mazeAsBytes[10] = ((Integer) (goal.getColumnIndex()/256)).byteValue();
+        mazeAsBytes[11] = ((Integer) (goal.getColumnIndex()%256)).byteValue();
 
 
 

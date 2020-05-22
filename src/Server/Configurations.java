@@ -13,7 +13,7 @@ public abstract class Configurations {
     public static void main (String[] args) {
         try (OutputStream output = new FileOutputStream("resources/config.properties")) {
             prop = new Properties();
-            prop.setProperty("threads", "10");
+            prop.setProperty("threads", "5");
             prop.setProperty("searchAlgorithm", "DepthFirstSearch");
             prop.setProperty("generator", "MyMazeGenerator");
             prop.store(output, null);

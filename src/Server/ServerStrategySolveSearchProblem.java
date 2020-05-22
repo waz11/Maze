@@ -11,7 +11,6 @@ import java.util.Hashtable;
 import java.util.Properties;
 
 public class ServerStrategySolveSearchProblem implements IServerStrategy {
-    private ISearchingAlgorithm solving = new BestFirstSearch();
     private Hashtable<String, String> mazesSolved = new Hashtable<String, String>();
     private static int solutionCounter = 0;
 
@@ -19,7 +18,7 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
     public void serverStrategy(InputStream inputStream, OutputStream outputStream) {
         Maze maze;
         Solution solution;
-
+        ISearchingAlgorithm solving = new BestFirstSearch();
         try (InputStream input = new FileInputStream("resources/config.properties")) {
             Properties prop = new Properties();
             prop.load(input);
@@ -31,7 +30,6 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
         try {
             ObjectInputStream fromClient = new ObjectInputStream(inputStream);
             ObjectOutputStream toClient = new ObjectOutputStream(outputStream);

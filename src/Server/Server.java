@@ -27,7 +27,7 @@ public class Server {
         this.listeningInterval = listeningInterval;
         this.serverStrategy = serverStrategy;
 
-        this.threads = 10;
+        this.threads = 5;
         try (InputStream input = new FileInputStream("resources/config.properties")) {
             Properties prop = new Properties();
             prop.load(input);
