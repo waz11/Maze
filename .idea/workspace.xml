@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="ATP - Project - PartA:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/Solution.java" afterDir="false" />
-    </list>
+    <list default="true" id="96897ef4-30de-44ba-99cd-cc1205987ba2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,58 +10,44 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
-  </component>
-  <component name="ProjectId" id="1Zrt7jAhj3VvmzwC1Ib2tZFkZY3" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1c7xgJwnOLxoOxyNoBBuwzdFpUV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.1022495" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
-      <recent name="algorithms.search" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ron\Desktop\Maze\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunSearchOnMaze">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Configurations">
+    <configuration name="Configurations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Configurations" />
+      <module name="Maze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Main" />
-      <module name="ATP - Project - PartA" />
+      <module name="Maze" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -87,9 +58,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
-      <module name="ATP - Project - PartA" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Maze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCommunicateWithServers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunCommunicateWithServers" />
+      <module name="Maze" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -100,45 +84,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunSearchOnMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunSearchOnMaze" />
-      <module name="ATP - Project - PartA" />
+    <configuration name="RunCompressDecompressMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunCompressDecompressMaze" />
+      <module name="Maze" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JunitTestingBestFirstSearch.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ATP - Project - PartA" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JunitTestingBestFirstSearch" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchableMazeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ATP - Project - PartA" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchableMazeTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunSearchOnMaze" />
+        <item itemvalue="Application.Configurations" />
+        <item itemvalue="Application.RunCommunicateWithServers" />
+        <item itemvalue="Application.RunCompressDecompressMaze" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="JUnit.SearchableMazeTest" />
-        <item itemvalue="JUnit.JunitTestingBestFirstSearch.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -147,601 +111,85 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bbec59b9-b843-4fdc-84f8-e6257c6df528" name="Default Changelist" comment="" />
-      <created>1585608874550</created>
+      <changelist id="96897ef4-30de-44ba-99cd-cc1205987ba2" name="Default Changelist" comment="" />
+      <created>1589893542440</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585608874550</updated>
-      <workItem from="1585608877150" duration="2000" />
-      <workItem from="1585608905717" duration="55000" />
-      <workItem from="1585629794932" duration="487000" />
-      <workItem from="1585630304799" duration="17000" />
-      <workItem from="1585630369365" duration="566000" />
-      <workItem from="1585631052617" duration="379000" />
-      <workItem from="1585631477576" duration="8000" />
-      <workItem from="1585653008864" duration="76000" />
-      <workItem from="1585664927907" duration="61000" />
-      <workItem from="1585665014114" duration="14000" />
-      <workItem from="1585665193389" duration="2865000" />
-      <workItem from="1585754446151" duration="5126000" />
-      <workItem from="1585760230590" duration="611000" />
-      <workItem from="1585833727824" duration="7350000" />
-      <workItem from="1585858490401" duration="535000" />
-      <workItem from="1585859052561" duration="5745000" />
-      <workItem from="1585864965582" duration="315000" />
-      <workItem from="1585865315314" duration="22000" />
-      <workItem from="1585903892964" duration="858000" />
-      <workItem from="1585904879422" duration="135000" />
-      <workItem from="1585905064658" duration="3671000" />
-      <workItem from="1585908871404" duration="5376000" />
-      <workItem from="1585914813275" duration="222000" />
-      <workItem from="1585915654900" duration="52000" />
-      <workItem from="1585915918319" duration="591000" />
-      <workItem from="1585918229051" duration="778000" />
-      <workItem from="1585919047402" duration="411000" />
-      <workItem from="1585919517317" duration="626000" />
-      <workItem from="1585920285827" duration="2213000" />
-      <workItem from="1585922537136" duration="2697000" />
-      <workItem from="1586008154194" duration="200000" />
-      <workItem from="1586012781519" duration="1021000" />
-      <workItem from="1586024578043" duration="85000" />
-      <workItem from="1586025223104" duration="449000" />
-      <workItem from="1586116865231" duration="4385000" />
-      <workItem from="1586121385351" duration="174000" />
-      <workItem from="1586121673505" duration="202000" />
-      <workItem from="1586122067386" duration="75000" />
-      <workItem from="1586172359482" duration="33000" />
-      <workItem from="1586172507175" duration="684000" />
-      <workItem from="1586173217245" duration="1469000" />
-      <workItem from="1586175573962" duration="285000" />
-      <workItem from="1586175962593" duration="111000" />
-      <workItem from="1586424178818" duration="6197000" />
-      <workItem from="1586463405136" duration="2325000" />
-      <workItem from="1586605688045" duration="2915000" />
-      <workItem from="1586613406202" duration="3496000" />
-      <workItem from="1586620624617" duration="6984000" />
-      <workItem from="1586694099019" duration="2124000" />
-      <workItem from="1586696391238" duration="194000" />
-      <workItem from="1586697606563" duration="123000" />
-      <workItem from="1586697751156" duration="440000" />
-      <workItem from="1586714662110" duration="144000" />
-      <workItem from="1586780886330" duration="192000" />
-      <workItem from="1586781212442" duration="1009000" />
-      <workItem from="1586782805083" duration="205000" />
-      <workItem from="1586870206373" duration="95000" />
-      <workItem from="1586880027083" duration="97000" />
-      <workItem from="1586880151851" duration="118000" />
-      <workItem from="1586881089853" duration="927000" />
-      <workItem from="1586882077712" duration="1549000" />
-      <workItem from="1586885745344" duration="9879000" />
-      <workItem from="1586896022484" duration="145000" />
-      <workItem from="1586896251881" duration="95000" />
-      <workItem from="1586896899169" duration="233000" />
-      <workItem from="1586897465193" duration="104000" />
-      <workItem from="1586897595736" duration="16000" />
-      <workItem from="1586897958636" duration="89000" />
-      <workItem from="1586936851190" duration="3300000" />
-      <workItem from="1586948267180" duration="4651000" />
-      <workItem from="1586953624516" duration="35000" />
-      <workItem from="1586953719899" duration="72000" />
-      <workItem from="1586956849640" duration="108000" />
-      <workItem from="1586958672991" duration="1087000" />
-      <workItem from="1586960658773" duration="47000" />
-      <workItem from="1586961326351" duration="235000" />
-      <workItem from="1586961655506" duration="28000" />
-      <workItem from="1586966546184" duration="7000" />
-      <workItem from="1586966628945" duration="690000" />
-      <workItem from="1587024960751" duration="51000" />
-      <workItem from="1587050724146" duration="542000" />
-      <workItem from="1587834887183" duration="80000" />
-      <workItem from="1587891071281" duration="4607000" />
-      <workItem from="1588069373429" duration="6567000" />
-      <workItem from="1588172642802" duration="662000" />
-      <workItem from="1588608789884" duration="627000" />
-      <workItem from="1589644046888" duration="2128000" />
-      <workItem from="1589701650285" duration="8611000" />
+      <updated>1589893542440</updated>
+      <workItem from="1589893546044" duration="1788000" />
+      <workItem from="1589966333662" duration="61000" />
+      <workItem from="1589982053036" duration="2973000" />
+      <workItem from="1589985304376" duration="7242000" />
+      <workItem from="1589992605850" duration="1361000" />
+      <workItem from="1589994014871" duration="316000" />
+      <workItem from="1589994373053" duration="102000" />
+      <workItem from="1589997162267" duration="60000" />
+      <workItem from="1590136720216" duration="274000" />
+      <workItem from="1590137110552" duration="14000" />
+      <workItem from="1590137504107" duration="176000" />
+      <workItem from="1590137936072" duration="209000" />
+      <workItem from="1590138207927" duration="54000" />
+      <workItem from="1590138414410" duration="155000" />
+      <workItem from="1590138954235" duration="2259000" />
+      <workItem from="1590142170415" duration="204000" />
     </task>
-    <task id="LOCAL-00018" summary="ron">
-      <created>1585918421385</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1585918421385</updated>
-    </task>
-    <task id="LOCAL-00019" summary="ron">
-      <created>1585918578733</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1585918578733</updated>
-    </task>
-    <task id="LOCAL-00020" summary="ron">
-      <created>1585918971533</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1585918971533</updated>
-    </task>
-    <task id="LOCAL-00021" summary="ron">
-      <created>1585921932742</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1585921932742</updated>
-    </task>
-    <task id="LOCAL-00022" summary="ron">
-      <created>1585922295792</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1585922295792</updated>
-    </task>
-    <task id="LOCAL-00023" summary="ron">
-      <created>1585922697495</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1585922697495</updated>
-    </task>
-    <task id="LOCAL-00024" summary="ron">
-      <created>1585923222151</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1585923222151</updated>
-    </task>
-    <task id="LOCAL-00025" summary="ron">
-      <created>1585924819144</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1585924819144</updated>
-    </task>
-    <task id="LOCAL-00026" summary="ron">
-      <created>1586008298730</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1586008298730</updated>
-    </task>
-    <task id="LOCAL-00027" summary="ron">
-      <created>1586121185849</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1586121185849</updated>
-    </task>
-    <task id="LOCAL-00028" summary="ron">
-      <created>1586121716251</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1586121716251</updated>
-    </task>
-    <task id="LOCAL-00029" summary="ron">
-      <created>1586173128414</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1586173128414</updated>
-    </task>
-    <task id="LOCAL-00030" summary="ron">
-      <created>1586176011781</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1586176011782</updated>
-    </task>
-    <task id="LOCAL-00031" summary="ron">
-      <created>1586606693274</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1586606693274</updated>
-    </task>
-    <task id="LOCAL-00032" summary="ron">
-      <created>1586695569255</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1586695569255</updated>
-    </task>
-    <task id="LOCAL-00033" summary="ron">
-      <created>1586695595763</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1586695595763</updated>
-    </task>
-    <task id="LOCAL-00034" summary="ron">
-      <created>1586695737036</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1586695737036</updated>
-    </task>
-    <task id="LOCAL-00035" summary="ron">
-      <created>1586870249092</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1586870249092</updated>
-    </task>
-    <task id="LOCAL-00036" summary="ron">
-      <created>1586880095953</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1586880095953</updated>
-    </task>
-    <task id="LOCAL-00037" summary="ron">
-      <created>1586881789406</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1586881789406</updated>
-    </task>
-    <task id="LOCAL-00038" summary="ron">
-      <created>1586884229463</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1586884229463</updated>
-    </task>
-    <task id="LOCAL-00039" summary="ron">
-      <created>1586884295724</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1586884295724</updated>
-    </task>
-    <task id="LOCAL-00040" summary="ron">
-      <created>1586887437940</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1586887437940</updated>
-    </task>
-    <task id="LOCAL-00041" summary="ron">
-      <created>1586887461093</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1586887461093</updated>
-    </task>
-    <task id="LOCAL-00042" summary="ron">
-      <created>1586888806925</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1586888806925</updated>
-    </task>
-    <task id="LOCAL-00043" summary="ron">
-      <created>1586891954857</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1586891954857</updated>
-    </task>
-    <task id="LOCAL-00044" summary="ron">
-      <created>1586891970348</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1586891970348</updated>
-    </task>
-    <task id="LOCAL-00045" summary="ron">
-      <created>1586892326202</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1586892326202</updated>
-    </task>
-    <task id="LOCAL-00046" summary="ron">
-      <created>1586893219501</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1586893219501</updated>
-    </task>
-    <task id="LOCAL-00047" summary="ron">
-      <created>1586893501901</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1586893501901</updated>
-    </task>
-    <task id="LOCAL-00048" summary="ron">
-      <created>1586893556357</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1586893556357</updated>
-    </task>
-    <task id="LOCAL-00049" summary="ron">
-      <created>1586893613433</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1586893613433</updated>
-    </task>
-    <task id="LOCAL-00050" summary="ron">
-      <created>1586893704299</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1586893704299</updated>
-    </task>
-    <task id="LOCAL-00051" summary="ron">
-      <created>1586897079850</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1586897079850</updated>
-    </task>
-    <task id="LOCAL-00052" summary="ron">
-      <created>1586897552329</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1586897552329</updated>
-    </task>
-    <task id="LOCAL-00053" summary="ron">
-      <created>1586948356849</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1586948356849</updated>
-    </task>
-    <task id="LOCAL-00054" summary="ron">
-      <created>1586948518384</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1586948518384</updated>
-    </task>
-    <task id="LOCAL-00055" summary="ron">
-      <created>1586948617253</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1586948617253</updated>
-    </task>
-    <task id="LOCAL-00056" summary="ron">
-      <created>1586948840610</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1586948840610</updated>
-    </task>
-    <task id="LOCAL-00057" summary="ron">
-      <created>1586951515934</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1586951515934</updated>
-    </task>
-    <task id="LOCAL-00058" summary="ron">
-      <created>1586953302915</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1586953302915</updated>
-    </task>
-    <task id="LOCAL-00059" summary="ron">
-      <created>1586959454837</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1586959454837</updated>
-    </task>
-    <task id="LOCAL-00060" summary="ron">
-      <created>1586959661078</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1586959661078</updated>
-    </task>
-    <task id="LOCAL-00061" summary="ron">
-      <created>1586961547590</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1586961547605</updated>
-    </task>
-    <task id="LOCAL-00062" summary="ron">
-      <created>1586966887066</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1586966887081</updated>
-    </task>
-    <task id="LOCAL-00063" summary="ron">
-      <created>1586966933347</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1586966933347</updated>
-    </task>
-    <task id="LOCAL‎00064" summary="Lielle - Part B">
-      <created>1587920067851</created>
-      <option name="number" value="LOCAL‎00064" />
-      <option name="presentableId" value="LOCAL‎00064" />
-      <updated>1587920067851</updated>
-    </task>
-    <task id="LOCAL‎00065" summary="Lielle - Part B">
-      <created>1588101304973</created>
-      <option name="number" value="LOCAL‎00065" />
-      <option name="presentableId" value="LOCAL‎00065" />
-      <updated>1588101304980</updated>
-    </task>
-    <task id="LOCAL‎00066" summary="Lielle - Part B">
-      <created>1588103904783</created>
-      <option name="number" value="LOCAL‎00066" />
-      <option name="presentableId" value="LOCAL‎00066" />
-      <updated>1588103904783</updated>
-    </task>
-    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="lielle" />
-    <MESSAGE value="ron" />
-    <MESSAGE value="Lielle - Part B" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lielle - Part B" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="274" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586937361038">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589893599584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="274" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586937361038" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585842390929" />
-    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1586939641408">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589893599584" />
+    <state x="428" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590138557644">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1586939641408" />
-    <state x="313" y="98" key="#com.intellij.ide.util.ExportDialog" timestamp="1586606501417">
+    <state x="428" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1590138557644" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590142190448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="313" y="98" key="#com.intellij.ide.util.ExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1586606501417" />
-    <state x="686" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1589713918151">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586966967819" />
-    <state x="686" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589713918151" />
-    <state x="490" y="212" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586880246586">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590142190448" />
+    <state width="1323" height="233" key="GridCell.Tab.0.bottom" timestamp="1590142374844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="490" y="212" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1586880246586" />
-    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585842390137" />
-    <state x="363" y="103" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586781025303">
+    <state width="1323" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590142374844" />
+    <state width="1323" height="233" key="GridCell.Tab.0.center" timestamp="1590142374844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="103" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1586781025303" />
-    <state x="484" y="233" width="397" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586606784265">
+    <state width="1323" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590142374844" />
+    <state width="1323" height="233" key="GridCell.Tab.0.left" timestamp="1590142374844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="484" y="233" width="397" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1586606784265" />
-    <state x="408" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586635377358">
+    <state width="1323" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590142374844" />
+    <state width="1323" height="233" key="GridCell.Tab.0.right" timestamp="1590142374844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="408" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1586635377358" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586428382759">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586428382759" />
-    <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586938906554">
+    <state width="1323" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590142374844" />
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1589993967446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586938906554" />
-    <state x="429" y="244" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586949122820">
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589993967446" />
+    <state width="1323" height="199" key="GridCell.Tab.1.center" timestamp="1589993967446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="429" y="244" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1586949122820" />
-    <state x="687" y="94" key="CommitChangelistDialog2" timestamp="1588103903889">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="42" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586967089105" />
-    <state x="687" y="94" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588103903889" />
-    <state x="443" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1585630638613">
+    <state width="1323" height="199" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589993967446" />
+    <state width="1323" height="199" key="GridCell.Tab.1.left" timestamp="1589993967445">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="443" y="0" key="Diagram.Print.Preview.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1585630638613" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585683925496">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585683925496" />
-    <state x="651" y="137" key="FileChooserDialogImpl" timestamp="1587834965038">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586952580234" />
-    <state x="651" y="137" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587834965038" />
-    <state width="1877" height="420" key="GridCell.Tab.0.bottom" timestamp="1587025011240">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586967218692" />
-    <state width="1877" height="420" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587025011240" />
-    <state width="1877" height="420" key="GridCell.Tab.0.center" timestamp="1587025011240">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586967218692" />
-    <state width="1877" height="420" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587025011240" />
-    <state width="1877" height="420" key="GridCell.Tab.0.left" timestamp="1587025011240">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586967218692" />
-    <state width="1877" height="420" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587025011240" />
-    <state width="1877" height="420" key="GridCell.Tab.0.right" timestamp="1587025011240">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586967218692" />
-    <state width="1877" height="420" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587025011240" />
-    <state width="1877" height="245" key="GridCell.Tab.1.bottom" timestamp="1587024875229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586610901879" />
-    <state width="1877" height="245" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587024875229" />
-    <state width="1877" height="245" key="GridCell.Tab.1.center" timestamp="1587024875229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586610901879" />
-    <state width="1877" height="245" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587024875229" />
-    <state width="1877" height="245" key="GridCell.Tab.1.left" timestamp="1587024875229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586610901879" />
-    <state width="1877" height="245" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587024875229" />
-    <state width="1877" height="245" key="GridCell.Tab.1.right" timestamp="1587024875229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586610901879" />
-    <state width="1877" height="245" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587024875229" />
-    <state x="229" y="0" width="1118" height="728" key="SettingsEditor" timestamp="1587893097348">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="163" y="0" width="1118" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586892482369" />
-    <state x="229" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587893097348" />
-    <state x="769" y="147" key="Vcs.Push.Dialog.v2" timestamp="1588103910072">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="547" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586966891839" />
-    <state x="769" y="147" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588103910072" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1589701936737">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589701936737" />
-    <state x="331" y="265" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586606105621">
+    <state width="1323" height="199" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589993967445" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right" timestamp="1589993967446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="331" y="265" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1586606105621" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589644063605">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="547" y="305" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586890063479" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589644063605" />
-    <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586937474867">
+    <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589993967446" />
+    <state x="65" y="0" key="new project wizard" timestamp="1590139402401">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="454" y="84" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1586937474867" />
-    <state x="430" y="167" key="git4idea.merge.GitPullDialog" timestamp="1585909923185">
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1590139402401" />
+    <state x="681" y="166" key="run.anything.popup" timestamp="1589986882315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="430" y="167" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1585909923185" />
-    <state x="342" y="140" key="new project wizard" timestamp="1587834966247">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-64" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1586782891024" />
-    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587834966247" />
-    <state x="389" y="111" key="refactoring.ChangeSignatureDialog" timestamp="1586893664530">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="389" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1586893664530" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585914021085">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585914021085" />
+    <state x="681" y="166" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1589986882315" />
   </component>
 </project>

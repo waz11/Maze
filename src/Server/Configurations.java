@@ -10,7 +10,7 @@ public abstract class Configurations {
 
     private static Properties prop;
 
-    public static void Configurations(String[] args) {
+    public static void main (String[] args) {
         try (OutputStream output = new FileOutputStream("resources/config.properties")) {
             prop = new Properties();
             prop.setProperty("threads", "10");
