@@ -65,7 +65,6 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
                 toClient.flush();
 
             }
-
             toClient.close();
             fromClient.close();
         } catch (IOException e) {
