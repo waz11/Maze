@@ -37,8 +37,11 @@ public class ServerStrategyGenerateMaze implements IServerStrategy {
             compressor.flush();
             toClient.writeObject(ByteOutputStream.toByteArray());
             toClient.flush();
+
             fromClient.close();
             toClient.close();
+
+
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96897ef4-30de-44ba-99cd-cc1205987ba2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" afterDir="false" />
-    </list>
+    <list default="true" id="96897ef4-30de-44ba-99cd-cc1205987ba2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,13 +30,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ron\Desktop\Maze\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Configurations">
+  <component name="RunManager" selected="Application.RunCompressDecompressMaze">
     <configuration name="Configurations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.Configurations" />
       <module name="Maze" />
@@ -107,11 +105,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
+      <module name="Maze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunCompressDecompressMaze" />
+        <item itemvalue="Application.RunMazeGenerator" />
         <item itemvalue="Application.Configurations" />
         <item itemvalue="Application.RunCommunicateWithServers" />
-        <item itemvalue="Application.RunCompressDecompressMaze" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -146,7 +158,8 @@
       <workItem from="1590144014910" duration="99000" />
       <workItem from="1590144176620" duration="22000" />
       <workItem from="1590144294819" duration="12000" />
-      <workItem from="1590944966092" duration="142000" />
+      <workItem from="1590921092698" duration="1576000" />
+      <workItem from="1591901807890" duration="25000" />
     </task>
     <servers />
   </component>
@@ -162,26 +175,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="428" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1590138557644" />
+    <state x="413" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1591901825955">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1591901825955" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590142190448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590142190448" />
-    <state width="1323" height="233" key="GridCell.Tab.0.bottom" timestamp="1590144114477">
+    <state width="1323" height="74" key="GridCell.Tab.0.bottom" timestamp="1590924950876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590144114477" />
-    <state width="1323" height="233" key="GridCell.Tab.0.center" timestamp="1590144114477">
+    <state width="1323" height="74" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590924950876" />
+    <state width="1323" height="74" key="GridCell.Tab.0.center" timestamp="1590924950876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590144114477" />
-    <state width="1323" height="233" key="GridCell.Tab.0.left" timestamp="1590144114477">
+    <state width="1323" height="74" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590924950876" />
+    <state width="1323" height="74" key="GridCell.Tab.0.left" timestamp="1590924950876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590144114477" />
-    <state width="1323" height="233" key="GridCell.Tab.0.right" timestamp="1590144114477">
+    <state width="1323" height="74" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590924950876" />
+    <state width="1323" height="74" key="GridCell.Tab.0.right" timestamp="1590924950876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590144114477" />
+    <state width="1323" height="74" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590924950876" />
     <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1589993967446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -198,6 +215,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589993967446" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1591901831970">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591901831970" />
     <state x="65" y="0" key="new project wizard" timestamp="1590139402401">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
